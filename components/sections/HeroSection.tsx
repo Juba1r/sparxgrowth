@@ -23,8 +23,7 @@ export function HeroSection() {
             height: 600,
             background: "radial-gradient(circle, rgba(37,99,235,0.18) 0%, transparent 70%)",
             top: "5%",
-            left: "50%",
-            transform: "translateX(-50%)",
+            left: "calc(50% - 300px)",
           }}
         />
         <div
@@ -58,6 +57,7 @@ export function HeroSection() {
           backgroundImage:
             "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
           backgroundSize: "60px 60px",
+          backgroundPosition: "center center",
         }}
       />
 
@@ -137,20 +137,6 @@ export function HeroSection() {
         </motion.div>
       </motion.div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-      >
-        <span className="text-xs text-white/30 uppercase tracking-widest">Scroll</span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className="w-px h-8 bg-gradient-to-b from-white/30 to-transparent"
-        />
-      </motion.div>
     </section>
   );
 }

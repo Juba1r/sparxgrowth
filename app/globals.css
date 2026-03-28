@@ -28,36 +28,63 @@
   box-sizing: border-box;
 }
 
-/* Page-level top offset to clear the fixed navbar (80px tall + breathing room) */
+/* Page-level top offset to clear the fixed navbar */
 .page-hero {
-  padding-top: 128px;
+  padding-top: 6rem;   /* 96px — nav is ~80px */
+}
+
+@media (min-width: 1024px) {
+  .page-hero {
+    padding-top: 7rem;  /* 112px on lg+ */
+  }
 }
 
 .page-hero-inner {
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .page-hero-inner-sm {
-  padding-top: 40px;
-  padding-bottom: 64px;
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
 }
 
-/* Reliable horizontal container — works even if Tailwind JIT misses px- classes */
+/* Reliable horizontal container — max-w-7xl equivalent */
 .section-container {
   max-width: 80rem;      /* 1280px = max-w-7xl */
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.5rem;  /* 24px */
-  padding-right: 1.5rem;
+  padding-left: 1rem;    /* 16px base */
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .section-container {
+    padding-left: 1.5rem;  /* 24px sm+ */
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-container {
+    padding-left: 2rem;    /* 32px lg+ */
+    padding-right: 2rem;
+  }
 }
 
 .section-container-sm {
-  max-width: 56rem;      /* 896px = max-w-4xl */
+  max-width: 48rem;      /* 768px = max-w-3xl */
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .section-container-sm {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 

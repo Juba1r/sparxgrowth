@@ -35,7 +35,7 @@ export function AnimatedSection({
   return (
     <motion.div
       ref={ref}
-      className={cn(className)}
+      className={cn("w-full", className)}
       initial={{ opacity: 0, x, y }}
       animate={isInView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, x, y }}
       transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}

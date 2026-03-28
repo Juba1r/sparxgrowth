@@ -65,10 +65,10 @@ export function Navbar() {
             : "bg-transparent"
         )}
       >
-        <div className="section-container">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             className={cn(
-              "flex items-center justify-between transition-all duration-500",
+              "relative flex items-center justify-between transition-all duration-500",
               scrolled ? "h-16" : "h-20"
             )}
           >
@@ -90,7 +90,7 @@ export function Navbar() {
             </Link>
 
             {/* Desktop Nav */}
-            <nav ref={dropdownRef} className="hidden lg:flex items-center gap-1">
+            <nav ref={dropdownRef} className="hidden lg:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
               {navLinks.map((link) => (
                 <div key={link.label} className="relative">
                   {link.hasDropdown ? (

@@ -11,9 +11,9 @@ const clients = [
 
 export function TrustBar() {
   return (
-    <section className="py-14 border-y border-white/[0.05] relative overflow-hidden">
-      <div className="section-container mb-8 text-center">
-        <p className="text-xs text-white/30 uppercase tracking-widest font-semibold">
+    <section className="w-full py-14 border-y border-white/[0.05] relative overflow-hidden flex flex-col justify-center gap-[30px]">
+      <div className="w-full flex justify-center px-4">
+        <p className="text-xs text-white/30 uppercase tracking-widest font-semibold text-center">
           Trusted by London&apos;s most ambitious brands
         </p>
       </div>
@@ -27,15 +27,15 @@ export function TrustBar() {
 
         <div className="flex overflow-hidden">
           <motion.div
-            className="flex gap-12 flex-shrink-0 animate-marquee"
+            className="flex gap-10 flex-shrink-0 animate-marquee"
             style={{ width: "max-content" }}
           >
             {clients.map((client, i) => (
               <div
                 key={i}
-                className="flex items-center gap-2 px-6 py-3 rounded-full border border-white/[0.06] bg-white/[0.02] whitespace-nowrap"
+                className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/[0.06] bg-white/[0.02] whitespace-nowrap"
               >
-                <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400" />
+                <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 flex-shrink-0" />
                 <span className="text-sm font-medium text-white/40">{client}</span>
               </div>
             ))}

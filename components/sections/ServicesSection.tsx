@@ -12,72 +12,55 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; className?: s
 
 export function ServicesSection({ hideHeader = false, hideViewAll = false, compact = false }: { hideHeader?: boolean; hideViewAll?: boolean; compact?: boolean }) {
   return (
-    <section className={compact ? "pb-24 relative" : "py-28 relative"}>
-      <div className="section-container">
-        {/* Header */}
+    <section className={compact ? "pb-14 lg:pb-20 relative" : "py-16 lg:py-24 relative"}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {!hideHeader && (
-          <AnimatedSection className="text-center mb-16">
-            <span className="section-tag mb-5 inline-flex">Our Services</span>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-white mb-5">
+          <AnimatedSection className="text-center mb-16 w-full flex flex-col items-center gap-5">
+            <span className="section-tag inline-flex">Our Services</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white tracking-tight text-balance max-w-3xl mx-auto">
               Everything You Need to{" "}
               <span className="glow-text">Dominate Online</span>
             </h2>
-            <p className="text-white/60 max-w-2xl mx-auto text-lg">
+            <p className="text-white/60 max-w-2xl mx-auto text-lg leading-relaxed text-center text-balance">
               Full-stack digital marketing services that work together to maximise your growth.
             </p>
           </AnimatedSection>
         )}
 
-        {/* Grid */}
         <StaggeredList
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mx-auto justify-center"
           staggerDelay={0.08}
         >
           {services.map((service) => {
             const Icon = iconMap[service.icon] || Search;
             return (
-              <Link key={service.slug} href={`/services/${service.slug}`}>
+              <Link key={service.slug} href={`/services/${service.slug}`} className="h-full w-full">
                 <motion.div
-                  className="glass-card p-6 h-full group cursor-pointer relative overflow-hidden"
+                  className="glass-card p-6 h-full flex flex-col items-center text-center group cursor-pointer relative overflow-hidden"
                   whileHover={{ y: -6 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
-                  {/* Glow on hover */}
                   <motion.div
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"
-                    style={{
-                      background: `radial-gradient(circle at 50% 0%, ${service.color}18 0%, transparent 60%)`,
-                    }}
+                    style={{ background: `radial-gradient(circle at 50% 0%, ${service.color}18 0%, transparent 60%)` }}
                   />
-
-                  {/* Icon */}
                   <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
+                    className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110 flex-shrink-0"
                     style={{ background: `${service.color}20`, border: `1px solid ${service.color}30` }}
                   >
-                    <Icon size={20} className="transition-colors" style={{ color: service.color }} />
+                    <Icon size={20} style={{ color: service.color }} />
                   </div>
-
-                  {/* Stat badge */}
-                  <div
-                    className="text-2xl font-heading font-bold mb-1"
-                    style={{ color: service.color }}
-                  >
+                  <div className="text-2xl font-heading font-bold mb-1" style={{ color: service.color }}>
                     {service.stat}
                   </div>
-                  <div className="text-xs text-white/40 mb-3">{service.statLabel}</div>
-
-                  <h3 className="text-white font-semibold text-base mb-2 group-hover:text-white transition-colors">
-                    {service.shortTitle}
-                  </h3>
-                  <p className="text-white/50 text-sm leading-relaxed line-clamp-2 mb-4">
+                  <div className="text-xs text-white/40 mb-4">{service.statLabel}</div>
+                  <h3 className="text-white font-semibold text-base mb-2">{service.shortTitle}</h3>
+                  <p className="text-white/50 text-sm leading-relaxed line-clamp-2 mb-4 flex-1">
                     {service.description}
                   </p>
-
-                  <div className="flex items-center gap-1.5 text-xs font-semibold transition-all duration-300 group-hover:gap-2.5"
+                  <div className="flex items-center gap-1.5 text-xs font-semibold mt-auto transition-all duration-300 group-hover:gap-2.5"
                     style={{ color: service.color }}>
-                    Learn More
-                    <ArrowRight size={12} className="transition-transform group-hover:translate-x-1" />
+                    Learn More <ArrowRight size={12} className="transition-transform group-hover:translate-x-1" />
                   </div>
                 </motion.div>
               </Link>
@@ -85,9 +68,8 @@ export function ServicesSection({ hideHeader = false, hideViewAll = false, compa
           })}
         </StaggeredList>
 
-        {/* View All */}
         {!hideViewAll && (
-          <AnimatedSection className="text-center mt-12" delay={0.3}>
+          <AnimatedSection className="text-center mt-10" delay={0.3}>
             <Link
               href="/services"
               className="inline-flex items-center gap-2 text-sm font-semibold text-white/60 hover:text-white border border-white/10 hover:border-white/20 px-7 py-3 rounded-full transition-all"

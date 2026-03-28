@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { CTAButton } from "@/components/ui/CTAButton";
-import { Phone, ArrowRight } from "lucide-react";
+import { Phone } from "lucide-react";
 
 export function FinalCTASection() {
   return (
-    <section className="py-32 relative overflow-hidden">
+    <section className="w-full py-32 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div
@@ -17,13 +17,14 @@ export function FinalCTASection() {
         />
       </div>
 
-      <div className="section-container-sm text-center relative">
+      {/* Centred content — CTA sections are an explicit exception to the left-align rule */}
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
         <AnimatedSection>
           <span className="section-tag mb-6 inline-flex">Let&apos;s Grow Together</span>
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-heading font-bold text-white mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-white mt-4 mb-6 leading-tight">
             Ready to <span className="glow-text">Accelerate</span> Your Growth?
           </h2>
-          <p className="text-white/60 text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
+          <p className="text-white/60 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
             Book a free 30-minute strategy call with our London-based team. No fluff, just honest advice and a clear roadmap.
           </p>
 
@@ -37,7 +38,7 @@ export function FinalCTASection() {
             </CTAButton>
           </div>
 
-          <div className="flex items-center justify-center gap-8 mt-12 text-sm text-white/40">
+          <div className="flex flex-wrap items-center justify-center gap-6 mt-12 text-sm text-white/40">
             {["No contracts", "Results in 90 days", "London-based team"].map((item, i) => (
               <div key={i} className="flex items-center gap-2">
                 <div className="w-1 h-1 rounded-full bg-cyan-400" />

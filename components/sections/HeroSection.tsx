@@ -13,7 +13,7 @@ export function HeroSection() {
   const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   return (
-    <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section ref={ref} className="w-full relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Animated background orbs */}
       <motion.div style={{ y }} className="absolute inset-0 pointer-events-none">
         <div
@@ -63,7 +63,7 @@ export function HeroSection() {
 
       <motion.div
         style={{ opacity }}
-        className="section-container-sm relative z-10 text-center"
+        className="max-w-7xl mx-auto justify-center px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center gap-8"
       >
         {/* Badge */}
         <motion.div

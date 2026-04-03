@@ -54,22 +54,74 @@ export function Navbar() {
 
   return (
     <>
-      {/* ─── Desktop Navbar — centered floating pill ─── */}
+      {/* ─── Navbar ─── */}
       <motion.header
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: scrolledUp ? 0 : -100, opacity: scrolledUp ? 1 : 0 }}
         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed top-0 left-0 right-0 z-[100] flex justify-center pointer-events-none"
-        style={{ paddingTop: scrolled ? "12px" : "20px", transition: "padding 0.4s ease" }}
+        className="fixed top-0 left-0 right-0 z-[100] pointer-events-none"
       >
+        {/* ── Mobile bar (< lg): full-width, logo left / hamburger right ── */}
         <div
           className={cn(
-            "pointer-events-auto flex items-center gap-2 transition-all duration-500",
+            "pointer-events-auto flex items-center justify-between px-5 transition-all duration-500",
+            mobileOpen
+              ? "hidden"
+              : "lg:hidden",
             scrolled
-              ? "bg-[#020818]/90 backdrop-blur-2xl border border-white/[0.10] shadow-2xl shadow-black/40 rounded-2xl px-3 py-2"
-              : "bg-transparent px-4 py-2"
+              ? "h-16 bg-[#020818]/95 backdrop-blur-xl border-b border-white/[0.07] shadow-lg shadow-black/30"
+              : "h-20 bg-transparent"
           )}
         >
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <motion.div
+              className="relative w-8 h-8 rounded-lg overflow-hidden flex-shrink-0"
+              whileHover={{ rotate: 15 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-cyan-400 rounded-lg" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <Zap size={15} className="text-white" fill="white" />
+              </div>
+            </motion.div>
+            <span className="font-heading font-bold text-xl text-white tracking-tight leading-none">
+              Sparx<span className="glow-text">Growth</span>
+            </span>
+          </Link>
+
+          {/* Hamburger */}
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="p-2.5 rounded-xl text-white/70 hover:text-white hover:bg-white/[0.07] transition-all"
+          >
+            <AnimatePresence mode="wait">
+              {mobileOpen ? (
+                <motion.div key="x" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.18 }}>
+                  <X size={22} />
+                </motion.div>
+              ) : (
+                <motion.div key="menu" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.18 }}>
+                  <Menu size={22} />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </button>
+        </div>
+
+        {/* ── Desktop pill (lg+): centered floating pill ── */}
+        <div
+          className="hidden lg:flex justify-center pointer-events-none"
+          style={{ paddingTop: scrolled ? "12px" : "20px", transition: "padding 0.4s ease" }}
+        >
+          <div
+            className={cn(
+              "pointer-events-auto flex items-center gap-2 transition-all duration-500",
+              scrolled
+                ? "bg-[#020818]/90 backdrop-blur-2xl border border-white/[0.10] shadow-2xl shadow-black/40 rounded-2xl px-3 py-2"
+                : "bg-transparent px-4 py-2"
+            )}
+          >
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group mr-2">
             <motion.div
@@ -228,24 +280,7 @@ export function Navbar() {
               </span>
             </Link>
           </div>
-
-          {/* Mobile hamburger */}
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 rounded-xl text-white/70 hover:text-white hover:bg-white/[0.07] transition-all ml-1"
-          >
-            <AnimatePresence mode="wait">
-              {mobileOpen ? (
-                <motion.div key="x" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.18 }}>
-                  <X size={20} />
-                </motion.div>
-              ) : (
-                <motion.div key="menu" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.18 }}>
-                  <Menu size={20} />
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </button>
+        </div>
         </div>
       </motion.header>
 

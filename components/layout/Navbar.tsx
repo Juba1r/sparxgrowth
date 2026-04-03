@@ -224,7 +224,7 @@ export function Navbar() {
               />
               <span className="relative flex items-center gap-1.5">
                 <Phone size={12} />
-                Book a Free Call
+                Let's Talk
               </span>
             </Link>
           </div>
@@ -318,7 +318,7 @@ export function Navbar() {
                   style={{ background: "linear-gradient(135deg, #2563eb, #06b6d4)" }}
                 >
                   <Phone size={14} />
-                  Book a Free Call
+                  Let's Talk
                 </Link>
               </motion.div>
             </div>
@@ -339,7 +339,7 @@ export function Navbar() {
           style={{ background: "linear-gradient(135deg, #2563eb, #06b6d4)" }}
         >
           <Phone size={14} />
-          Book a Free Call
+          Let's Talk
         </Link>
       </motion.div>
     </>

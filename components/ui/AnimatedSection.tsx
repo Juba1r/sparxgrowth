@@ -56,6 +56,7 @@ interface StaggeredListProps {
 export function StaggeredList({
   children,
   className,
+  itemClassName,
   staggerDelay = 0.1,
   baseDelay = 0,
 }: StaggeredListProps) {
@@ -67,6 +68,10 @@ export function StaggeredList({
       {children.map((child, i) => (
         <motion.div
           key={i}
+          // display:contents makes this wrapper invisible to the layout engine
+          // so flex/grid on the parent applies directly to the card children
+          style={{ display: "contents" }}
+          className={itemClassName}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{

@@ -46,31 +46,36 @@ export default function BlogPage() {
 
   return (
     <div style={{ paddingTop: '128px' }}>
-      <div style={{ paddingTop: '40px', paddingBottom: '56px' }} className="section-container-sm text-center">
-        <AnimatedSection>
-          <span className="section-tag mb-6 inline-flex">Expert Insights</span>
-          <h1 className="text-5xl sm:text-6xl font-heading font-bold text-white mb-4">
+      {/* Hero — full-width centered */}
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center" style={{ paddingTop: '40px', paddingBottom: '56px' }}>
+        <AnimatedSection className="flex flex-col items-center gap-4">
+          <span className="section-tag">Expert Insights</span>
+          <h1 className="text-5xl sm:text-6xl font-heading font-bold text-white">
             The SparxGrowth <span className="glow-text">Blog</span>
           </h1>
-          <p className="text-white/60 text-xl max-w-xl mx-auto">
+          <p className="text-white/60 text-xl max-w-xl">
             Actionable digital marketing insights to help you grow faster.
           </p>
         </AnimatedSection>
       </div>
 
-      <div className="section-container" style={{ paddingBottom: '96px' }}>
-        {/* Featured */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ paddingBottom: '96px' }}>
+        {/* Featured — two equal columns, content left-aligned */}
         <AnimatedSection className="mb-14">
           <Link href={`/blog/${featured.slug}`}>
-            <div className="glass-card overflow-hidden group grid lg:grid-cols-2 gap-0 cursor-pointer hover:-translate-y-1 transition-transform duration-300">
-              <div className="h-64 lg:h-auto relative"
-                style={{ background: "linear-gradient(135deg, #0a1628, #1e3a8a)" }}>
+            <div className="glass-card overflow-hidden group grid lg:grid-cols-2 cursor-pointer hover:-translate-y-1 transition-transform duration-300">
+              <div
+                className="h-64 lg:h-auto relative"
+                style={{ background: "linear-gradient(135deg, #0a1628, #1e3a8a)" }}
+              >
                 <div className="absolute inset-0 flex items-center justify-center opacity-20">
                   <div className="w-32 h-32 rounded-full border border-blue-400/50" />
                   <div className="absolute w-20 h-20 rounded-full border border-cyan-400/30" />
                 </div>
-                <div className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold text-cyan-400"
-                  style={{ background: "rgba(6,182,212,0.15)", border: "1px solid rgba(6,182,212,0.25)" }}>
+                <div
+                  className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold text-cyan-400"
+                  style={{ background: "rgba(6,182,212,0.15)", border: "1px solid rgba(6,182,212,0.25)" }}
+                >
                   Featured · {featured.category}
                 </div>
               </div>
@@ -91,25 +96,29 @@ export default function BlogPage() {
           </Link>
         </AnimatedSection>
 
-        {/* All posts */}
+        {/* All posts — left-aligned card content */}
         <StaggeredList
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
           staggerDelay={0.09}
         >
           {rest.map((post) => (
-            <Link key={post.slug} href={`/blog/${post.slug}`}>
-              <div className="glass-card overflow-hidden group cursor-pointer h-full hover:-translate-y-1 transition-transform duration-300">
-                <div className="h-44 relative"
-                  style={{ background: "linear-gradient(135deg, #0a1628, #1e3a8a)" }}>
+            <Link key={post.slug} href={`/blog/${post.slug}`} className="h-full">
+              <div className="glass-card overflow-hidden group cursor-pointer h-full flex flex-col hover:-translate-y-1 transition-transform duration-300">
+                <div
+                  className="h-44 relative flex-shrink-0"
+                  style={{ background: "linear-gradient(135deg, #0a1628, #1e3a8a)" }}
+                >
                   <div className="absolute inset-0 flex items-center justify-center opacity-20">
                     <div className="w-20 h-20 rounded-full border border-blue-400/40" />
                   </div>
-                  <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full text-xs font-semibold text-cyan-400"
-                    style={{ background: "rgba(6,182,212,0.15)", border: "1px solid rgba(6,182,212,0.25)" }}>
+                  <div
+                    className="absolute top-3 left-3 px-2.5 py-1 rounded-full text-xs font-semibold text-cyan-400"
+                    style={{ background: "rgba(6,182,212,0.15)", border: "1px solid rgba(6,182,212,0.25)" }}
+                  >
                     {post.category}
                   </div>
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-1">
                   <div className="flex items-center gap-3 text-xs text-white/40 mb-3">
                     <span className="flex items-center gap-1"><Clock size={10} /> {post.readTime}</span>
                     <span>{post.date}</span>
@@ -117,7 +126,10 @@ export default function BlogPage() {
                   <h3 className="text-white font-semibold text-base leading-snug mb-2 group-hover:text-blue-300 transition-colors">
                     {post.title}
                   </h3>
-                  <p className="text-white/50 text-sm leading-relaxed line-clamp-2">{post.excerpt}</p>
+                  <p className="text-white/50 text-sm leading-relaxed line-clamp-2 flex-1">{post.excerpt}</p>
+                  <div className="flex items-center gap-1.5 text-sm font-semibold text-blue-400 group-hover:gap-3 transition-all duration-300 mt-4">
+                    Read More <ArrowRight size={13} />
+                  </div>
                 </div>
               </div>
             </Link>

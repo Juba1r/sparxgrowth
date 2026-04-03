@@ -17,7 +17,7 @@ const benefits = [
 export function CheckUpBanner() {
   return (
     <section className="w-full py-24 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="section-container">
         <AnimatedSection>
           <div className="relative rounded-3xl overflow-hidden p-px"
             style={{ background: "linear-gradient(135deg, #1e3a8a, #0e7490, #1e3a8a)" }}>

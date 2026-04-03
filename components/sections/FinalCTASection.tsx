@@ -18,9 +18,9 @@ export function FinalCTASection() {
       </div>
 
       {/* Centred content — CTA sections are an explicit exception to the left-align rule */}
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+      <div className="section-container text-center relative">
         <AnimatedSection>
-          <span className="section-tag mb-6 inline-flex">Let&apos;s Grow Together</span>
+          <span className="section-tag">Let&apos;s Grow Together</span>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-white mt-4 mb-6 leading-tight">
             Ready to <span className="glow-text">Accelerate</span> Your Growth?
           </h2>

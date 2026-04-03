@@ -26,17 +26,17 @@ export function ContactClient() {
   return (
     <div style={{ paddingTop: '128px' }} className="min-h-screen">
       <div className="section-container" style={{ paddingTop: '64px', paddingBottom: '64px' }}>
-        <AnimatedSection className="text-center mb-16">
-          <span className="section-tag mb-6 inline-flex">Get In Touch</span>
-          <h1 className="text-5xl sm:text-6xl font-heading font-bold text-white mb-4">
+        <AnimatedSection className="text-center mb-12 flex flex-col items-center gap-4">
+          <span className="section-tag">Get In Touch</span>
+          <h1 className="text-5xl sm:text-6xl font-heading font-bold text-white">
             Let&apos;s <span className="glow-text">Talk Growth</span>
           </h1>
-          <p className="text-white/60 text-xl max-w-xl mx-auto">
+          <p className="text-white/60 text-xl max-w-xl">
             Book a free 30-minute strategy call and discover how we can help your business grow faster.
           </p>
         </AnimatedSection>
 
-        <div className="grid lg:grid-cols-3 gap-10">
+        <div className="grid lg:grid-cols-3 gap-10 items-start">
           {/* Contact Info */}
           <div className="space-y-5">
             {contactInfo.map((info) => {
@@ -148,7 +148,7 @@ export function ContactClient() {
                     Send My Enquiry
                   </motion.button>
 
-                  <p className="text-center text-xs text-white/30">
+                  <p className="text-center text-xs text-white/30 mt-4">
                     We respond to every enquiry within 2 business hours. No spam, ever.
                   </p>
                 </form>

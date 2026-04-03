@@ -82,7 +82,7 @@ const trust = [
 
 export function Footer() {
   return (
-    <footer className="relative bg-[#020818] overflow-hidden">
+    <footer className="relative bg-[#020818] overflow-hidden flex flex-col items-center">
 
       {/* ── Top gradient border ── */}
       <div

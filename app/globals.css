@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
 @config "../tailwind.config.ts";
 
@@ -17,25 +17,34 @@
   --text-primary: #f1f5f9;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
-  --gradient-hero: linear-gradient(135deg, #020818 0%, #0a1628 50%, #020818 100%);
+  --gradient-hero: linear-gradient(
+    135deg,
+    #020818 0%,
+    #0a1628 50%,
+    #020818 100%
+  );
   --gradient-blue: linear-gradient(135deg, #2563eb, #06b6d4);
-  --gradient-card: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  --gradient-card: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.02)
+  );
   --color-background: #020818;
 }
 
 * {
-  margin: 0;
+  
   box-sizing: border-box;
 }
 
 /* Page-level top offset to clear the fixed navbar */
 .page-hero {
-  padding-top: 6rem;   /* 96px — nav is ~80px */
+  padding-top: 6rem; /* 96px — nav is ~80px */
 }
 
 @media (min-width: 1024px) {
   .page-hero {
-    padding-top: 7rem;  /* 112px on lg+ */
+    padding-top: 7rem; /* 112px on lg+ */
   }
 }
 
@@ -51,10 +60,10 @@
 
 /* Reliable horizontal container — max-w-7xl equivalent */
 .section-container {
-  max-width: 80rem;      /* 1280px = max-w-7xl */
+  max-width: 80rem; /* 1280px = max-w-7xl */
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;    /* 16px base */
+  padding-left: 1rem; /* 16px base */
   padding-right: 1rem;
   display: flex;
   flex-direction: column;
@@ -63,20 +72,20 @@
 
 @media (min-width: 640px) {
   .section-container {
-    padding-left: 1.5rem;  /* 24px sm+ */
+    padding-left: 1.5rem; /* 24px sm+ */
     padding-right: 1.5rem;
   }
 }
 
 @media (min-width: 1024px) {
   .section-container {
-    padding-left: 2rem;    /* 32px lg+ */
+    padding-left: 2rem; /* 32px lg+ */
     padding-right: 2rem;
   }
 }
 
 .section-container-sm {
-  max-width: 48rem;      /* 768px = max-w-3xl */
+  max-width: 48rem; /* 768px = max-w-3xl */
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;
@@ -90,8 +99,6 @@
   }
 }
 
-
-
 html {
   scroll-behavior: smooth;
 }
@@ -99,14 +106,19 @@ html {
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.02em;
@@ -126,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Noise texture overlay */
 body::before {
-  content: '';
+  content: "";
   position: fixed;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
@@ -155,7 +167,9 @@ body::before {
   border-radius: 50%;
   pointer-events: none;
   z-index: 9998;
-  transition: transform 0.1s ease, opacity 0.3s ease;
+  transition:
+    transform 0.1s ease,
+    opacity 0.3s ease;
   mix-blend-mode: screen;
 }
 
@@ -247,14 +261,18 @@ body::before {
   position: relative;
 }
 .gradient-border::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   padding: 1px;
   border-radius: inherit;
   background: var(--gradient-blue);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
   pointer-events: none;
@@ -269,33 +287,68 @@ body::before {
 
 /* Animations */
 @keyframes orb-float {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(30px, -30px) scale(1.05); }
-  66% { transform: translate(-20px, 20px) scale(0.95); }
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.05);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
 }
 
 @keyframes pulse-glow {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
 @keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
-.animate-orb { animation: orb-float 8s ease-in-out infinite; }
-.animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
-.animate-float { animation: float 6s ease-in-out infinite; }
-.animate-spin-slow { animation: spin-slow 20s linear infinite; }
-.animate-marquee { animation: marquee 25s linear infinite; }
+.animate-orb {
+  animation: orb-float 8s ease-in-out infinite;
+}
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}

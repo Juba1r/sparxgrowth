@@ -35,7 +35,7 @@ export function TestimonialsSection() {
         </AnimatedSection>
 
         {/* Centered testimonial card */}
-        <div className="max-w-3xl mx-auto">
+        <div className="w-full max-w-3xl mx-auto">
           <AnimatePresence mode="wait">
             <motion.div
               key={active}

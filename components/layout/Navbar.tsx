@@ -2,9 +2,10 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Menu, X, Phone, Zap } from "lucide-react";
+import { ChevronDown, Menu, X, Phone } from "lucide-react";
 import { services, industries } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
@@ -69,25 +70,25 @@ export function Navbar() {
               ? "hidden"
               : "lg:hidden",
             scrolled
-              ? "h-16 bg-[#020818]/95 backdrop-blur-xl border-b border-white/[0.07] shadow-lg shadow-black/30"
+              ? "h-16 bg-[#030f07]/95 backdrop-blur-xl border-b border-white/[0.07] shadow-lg shadow-black/30"
               : "h-20 bg-transparent"
           )}
         >
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group">
+          <Link href="/" className="flex items-center group">
             <motion.div
-              className="relative w-8 h-8 rounded-lg overflow-hidden flex-shrink-0"
-              whileHover={{ rotate: 15 }}
+              whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-cyan-400 rounded-lg" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Zap size={15} className="text-white" fill="white" />
-              </div>
+              <Image
+                src="/SparxGrowth Logo.png"
+                alt="SparxGrowth"
+                width={180}
+                height={52}
+                className="h-14 w-auto object-contain"
+                priority
+              />
             </motion.div>
-            <span className="font-heading font-bold text-xl text-white tracking-tight leading-none">
-              Sparx<span className="glow-text">Growth</span>
-            </span>
           </Link>
 
           {/* Hamburger */}
@@ -118,25 +119,25 @@ export function Navbar() {
             className={cn(
               "pointer-events-auto flex items-center gap-2 transition-all duration-500",
               scrolled
-                ? "bg-[#020818]/90 backdrop-blur-2xl border border-white/[0.10] shadow-2xl shadow-black/40 rounded-2xl px-3 py-2"
+                ? "bg-[#030f07]/90 backdrop-blur-2xl border border-white/[0.10] shadow-2xl shadow-black/40 rounded-2xl px-3 py-2"
                 : "bg-transparent px-4 py-2"
             )}
           >
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group mr-2">
+          <Link href="/" className="flex items-center group mr-2">
             <motion.div
-              className="relative w-7 h-7 rounded-lg overflow-hidden flex-shrink-0"
-              whileHover={{ rotate: 15 }}
+              whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-cyan-400 rounded-lg" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Zap size={14} className="text-white" fill="white" />
-              </div>
+              <Image
+                src="/SparxGrowth Logo.png"
+                alt="SparxGrowth"
+                width={170}
+                height={48}
+                className="h-12 w-auto object-contain"
+                priority
+              />
             </motion.div>
-            <span className="font-heading font-bold text-lg text-white tracking-tight leading-none">
-              Sparx<span className="glow-text">Growth</span>
-            </span>
           </Link>
 
           {/* Divider */}
@@ -180,7 +181,7 @@ export function Navbar() {
                     {pathname === link.href && (
                       <motion.span
                         layoutId="nav-active"
-                        className="absolute bottom-1 left-3.5 right-3.5 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full"
+                        className="absolute bottom-1 left-3.5 right-3.5 h-0.5 rounded-full" style={{ background: 'linear-gradient(135deg, #064226, #1b9058, #ffde59)' }}
                       />
                     )}
                   </Link>
@@ -199,7 +200,7 @@ export function Navbar() {
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 8, scale: 0.97 }}
                           transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
-                          className="absolute top-full left-1/2 -translate-x-1/2 mt-2 min-w-[240px] p-1.5 rounded-2xl border border-white/[0.09] bg-[#050f1f]/96 backdrop-blur-2xl shadow-2xl shadow-black/60"
+                          className="absolute top-full left-1/2 -translate-x-1/2 mt-2 min-w-[240px] p-1.5 rounded-2xl border border-[#1b9058]/20 bg-[#030f07]/97 backdrop-blur-2xl shadow-2xl shadow-black/60"
                         >
                           {link.label === "Services" &&
                             services.map((s, i) => (
@@ -259,14 +260,17 @@ export function Navbar() {
           <div className="hidden lg:flex items-center gap-2">
             <Link
               href="/free-visibility-checkup"
-              className="px-4 py-2 rounded-xl text-sm font-semibold text-cyan-400 border border-cyan-400/25 hover:border-cyan-400/60 hover:bg-cyan-400/[0.07] transition-all duration-300 whitespace-nowrap"
+              className="px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 whitespace-nowrap"
+              style={{ color: '#ffde59', border: '1px solid rgba(255,222,89,0.30)', background: 'transparent' }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,222,89,0.65)'; (e.currentTarget as HTMLElement).style.background = 'rgba(255,222,89,0.07)'; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,222,89,0.30)'; (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
             >
               Free Check-Up
             </Link>
             <Link
               href="/contact"
               className="relative overflow-hidden px-5 py-2 rounded-xl text-sm font-bold text-white whitespace-nowrap group"
-              style={{ background: "linear-gradient(135deg, #2563eb, #06b6d4)" }}
+              style={{ background: "linear-gradient(135deg, #064226, #1b9058)" }}
             >
               <motion.span
                 className="absolute inset-0 bg-white/20"
@@ -292,16 +296,17 @@ export function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-[99] bg-[#020818]/98 backdrop-blur-2xl flex flex-col"
+            className="fixed inset-0 z-[99] bg-[#030f07]/98 backdrop-blur-2xl flex flex-col"
           >
             <div className="flex items-center justify-between px-6 h-20 border-b border-white/[0.06]">
-              <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-2.5">
-                <div className="w-7 h-7 bg-gradient-to-br from-blue-600 to-cyan-400 rounded-lg flex items-center justify-center">
-                  <Zap size={14} className="text-white" fill="white" />
-                </div>
-                <span className="font-heading font-bold text-xl text-white">
-                  Sparx<span className="glow-text">Growth</span>
-                </span>
+              <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center">
+                <Image
+                  src="/SparxGrowth Logo.png"
+                  alt="SparxGrowth"
+                  width={170}
+                  height={48}
+                  className="h-12 w-auto object-contain"
+                />
               </Link>
               <button onClick={() => setMobileOpen(false)} className="p-2 text-white/70 hover:text-white">
                 <X size={22} />
@@ -342,7 +347,8 @@ export function Navbar() {
                 <Link
                   href="/free-visibility-checkup"
                   onClick={() => setMobileOpen(false)}
-                  className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl text-sm font-semibold text-cyan-400 border border-cyan-400/35 hover:bg-cyan-400/10 transition-all"
+                  className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl text-sm font-semibold transition-all"
+                  style={{ color: '#ffde59', border: '1px solid rgba(255,222,89,0.35)' }}
                 >
                   Free Visibility Check-Up
                 </Link>
@@ -350,7 +356,7 @@ export function Navbar() {
                   href="/contact"
                   onClick={() => setMobileOpen(false)}
                   className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl text-sm font-bold text-white"
-                  style={{ background: "linear-gradient(135deg, #2563eb, #06b6d4)" }}
+                  style={{ background: "linear-gradient(135deg, #064226, #1b9058)" }}
                 >
                   <Phone size={14} />
                   Let's Talk
@@ -366,12 +372,12 @@ export function Navbar() {
         initial={{ y: 80 }}
         animate={{ y: 0 }}
         transition={{ delay: 1, duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed bottom-0 left-0 right-0 z-[90] lg:hidden p-4 bg-[#020818]/90 backdrop-blur-xl border-t border-white/[0.06]"
+        className="fixed bottom-0 left-0 right-0 z-[90] lg:hidden p-4 bg-[#030f07]/90 backdrop-blur-xl border-t border-white/[0.06]"
       >
         <Link
           href="/contact"
           className="flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-2xl text-sm font-bold text-white"
-          style={{ background: "linear-gradient(135deg, #2563eb, #06b6d4)" }}
+          style={{ background: "linear-gradient(135deg, #064226, #1b9058)" }}
         >
           <Phone size={14} />
           Let's Talk

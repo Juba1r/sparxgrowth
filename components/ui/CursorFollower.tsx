@@ -35,11 +35,11 @@ export function CursorFollower() {
     // Scale up on hoverable elements
     const handleEnter = () => {
       follower.style.transform = "scale(2)";
-      follower.style.borderColor = "rgba(6, 182, 212, 0.8)";
+      follower.style.borderColor = "rgba(255, 222, 89, 0.8)";
     };
     const handleLeave = () => {
       follower.style.transform = "scale(1)";
-      follower.style.borderColor = "rgba(37, 99, 235, 0.6)";
+      follower.style.borderColor = "rgba(27, 144, 88, 0.6)";
     };
 
     document.querySelectorAll("a, button, [data-hover]").forEach((el) => {

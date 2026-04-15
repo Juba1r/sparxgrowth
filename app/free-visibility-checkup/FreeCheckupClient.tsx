@@ -73,7 +73,7 @@ export function FreeCheckupClient() {
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] rounded-full blur-3xl opacity-[0.07]"
-          style={{ background: "linear-gradient(135deg, #2563eb, #06b6d4)" }} />
+          style={{ background: "linear-gradient(135deg, #064226, #1b9058)" }} />
       </div>
 
       <div className="section-container-sm relative" style={{ paddingTop: '64px', paddingBottom: '80px' }}>
@@ -98,7 +98,7 @@ export function FreeCheckupClient() {
               <div className="h-1.5 rounded-full bg-white/[0.08] overflow-hidden">
                 <motion.div
                   className="h-full rounded-full"
-                  style={{ background: "linear-gradient(90deg, #2563eb, #06b6d4)" }}
+                  style={{ background: "linear-gradient(90deg, #1b9058, #ffde59)" }}
                   animate={{ width: `${((currentStep + 1) / steps.length) * 100}%` }}
                   transition={{ duration: 0.5, ease: "easeInOut" }}
                 />
@@ -125,7 +125,7 @@ export function FreeCheckupClient() {
                         <label className="block text-sm font-medium text-white/70 mb-2">{field.label}</label>
                         {field.type === "select" ? (
                           <select
-                            className="w-full bg-white/[0.06] border border-white/[0.1] rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-blue-500/50 transition-colors"
+                            className="w-full bg-white/[0.06] border border-white/[0.1] rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-[#1b9058]/50 transition-colors"
                             value={formData[field.id] || ""}
                             onChange={(e) => setFormData((p) => ({ ...p, [field.id]: e.target.value }))}
                           >
@@ -138,7 +138,7 @@ export function FreeCheckupClient() {
                           <input
                             type={field.type}
                             placeholder={field.placeholder}
-                            className="w-full bg-white/[0.06] border border-white/[0.1] rounded-xl px-4 py-3 text-white text-sm placeholder:text-white/30 outline-none focus:border-blue-500/50 transition-colors"
+                            className="w-full bg-white/[0.06] border border-white/[0.1] rounded-xl px-4 py-3 text-white text-sm placeholder:text-white/30 outline-none focus:border-[#1b9058]/50 transition-colors"
                             value={formData[field.id] || ""}
                             onChange={(e) => setFormData((p) => ({ ...p, [field.id]: e.target.value }))}
                           />
@@ -157,12 +157,12 @@ export function FreeCheckupClient() {
                         onClick={() => toggleGoal(goal)}
                         className={`flex items-center gap-2.5 p-4 rounded-xl border text-left text-sm font-medium transition-all duration-200 ${
                           selectedGoals.includes(goal)
-                            ? "border-blue-500/60 bg-blue-500/15 text-white"
+                            ? "border-[#1b9058]/60 bg-[#1b9058]/15 text-white"
                             : "border-white/[0.1] bg-white/[0.03] text-white/60 hover:border-white/20 hover:text-white"
                         }`}
                       >
                         <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center shrink-0 ${
-                          selectedGoals.includes(goal) ? "border-blue-400 bg-blue-400" : "border-white/30"
+                          selectedGoals.includes(goal) ? "border-[#1b9058] bg-[#1b9058]" : "border-white/30"
                         }`}>
                           {selectedGoals.includes(goal) && <CheckCircle size={10} className="text-white" />}
                         </div>
@@ -181,12 +181,12 @@ export function FreeCheckupClient() {
                         onClick={() => setSelectedBudget(budget)}
                         className={`w-full flex items-center justify-between p-4 rounded-xl border text-sm font-medium transition-all duration-200 ${
                           selectedBudget === budget
-                            ? "border-blue-500/60 bg-blue-500/15 text-white"
+                            ? "border-[#1b9058]/60 bg-[#1b9058]/15 text-white"
                             : "border-white/[0.1] bg-white/[0.03] text-white/60 hover:border-white/20 hover:text-white"
                         }`}
                       >
                         {budget}
-                        {selectedBudget === budget && <CheckCircle size={16} className="text-blue-400" />}
+                        {selectedBudget === budget && <CheckCircle size={16} className="text-[#1b9058]" />}
                       </button>
                     ))}
                   </div>
@@ -207,7 +207,7 @@ export function FreeCheckupClient() {
               <motion.button
                 onClick={handleNext}
                 className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-sm font-bold text-white"
-                style={{ background: "linear-gradient(135deg, #2563eb, #06b6d4)" }}
+                style={{ background: "linear-gradient(135deg, #064226, #1b9058)" }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -224,7 +224,7 @@ export function FreeCheckupClient() {
               animate={{ scale: 1 }}
               transition={{ type: "spring", stiffness: 200, delay: 0.1 }}
               className="w-24 h-24 rounded-full mx-auto mb-8 flex items-center justify-center"
-              style={{ background: "linear-gradient(135deg, #2563eb, #06b6d4)" }}
+              style={{ background: "linear-gradient(135deg, #064226, #1b9058)" }}
             >
               <Sparkles size={36} className="text-white" />
             </motion.div>
@@ -252,7 +252,7 @@ export function FreeCheckupClient() {
             >
               {["Full SEO audit", "Competitor analysis", "Quick wins roadmap"].map((item) => (
                 <div key={item} className="flex items-center gap-3 justify-center text-sm text-white/60">
-                  <CheckCircle size={16} className="text-cyan-400" />
+                  <CheckCircle size={16} className="text-[#1b9058]" />
                   {item}
                 </div>
               ))}

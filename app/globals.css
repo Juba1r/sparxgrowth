@@ -3,33 +3,36 @@
 @config "../tailwind.config.ts";
 
 :root {
-  --background: #020818;
-  --foreground: #e8eaf6;
-  --primary: #2563eb;
-  --primary-light: #3b82f6;
-  --primary-glow: rgba(37, 99, 235, 0.4);
-  --accent: #06b6d4;
-  --accent-glow: rgba(6, 182, 212, 0.3);
-  --surface: rgba(255, 255, 255, 0.04);
-  --surface-hover: rgba(255, 255, 255, 0.08);
-  --border: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(255, 255, 255, 0.18);
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  --background: #030f07;
+  --foreground: #edf5f0;
+  --primary: #1b9058;
+  --primary-light: #22b56c;
+  --primary-glow: rgba(27, 144, 88, 0.45);
+  --accent: #ffde59;
+  --accent-glow: rgba(255, 222, 89, 0.35);
+  --deep-green: #064226;
+  --surface: rgba(27, 144, 88, 0.05);
+  --surface-hover: rgba(27, 144, 88, 0.10);
+  --border: rgba(27, 144, 88, 0.15);
+  --border-hover: rgba(27, 144, 88, 0.35);
+  --text-primary: #edf5f0;
+  --text-secondary: #8fb89d;
+  --text-muted: #5a7a64;
   --gradient-hero: linear-gradient(
     135deg,
-    #020818 0%,
-    #0a1628 50%,
-    #020818 100%
+    #030f07 0%,
+    #064226 50%,
+    #030f07 100%
   );
-  --gradient-blue: linear-gradient(135deg, #2563eb, #06b6d4);
+  --gradient-brand: linear-gradient(135deg, #064226, #1b9058, #ffde59);
+  --gradient-green: linear-gradient(135deg, #064226, #1b9058);
+  --gradient-gold: linear-gradient(135deg, #1b9058, #ffde59);
   --gradient-card: linear-gradient(
     145deg,
-    rgba(255, 255, 255, 0.06),
-    rgba(255, 255, 255, 0.02)
+    rgba(27, 144, 88, 0.08),
+    rgba(6, 66, 38, 0.04)
   );
-  --color-background: #020818;
+  --color-background: #030f07;
 }
 
 * {
@@ -132,7 +135,7 @@ h6 {
   background: var(--background);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--primary);
+  background: var(--gradient-green);
   border-radius: 10px;
 }
 
@@ -153,7 +156,7 @@ body::before {
   top: 0;
   left: 0;
   height: 2px;
-  background: var(--gradient-blue);
+  background: var(--gradient-brand);
   z-index: 10000;
   transform-origin: left;
 }
@@ -163,7 +166,7 @@ body::before {
   position: fixed;
   width: 28px;
   height: 28px;
-  border: 1.5px solid rgba(37, 99, 235, 0.6);
+  border: 1.5px solid rgba(27, 144, 88, 0.6);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9998;
@@ -195,7 +198,7 @@ body::before {
   color: white;
   font-size: 0.875rem;
   transition: all 0.3s ease;
-  background: var(--gradient-blue);
+  background: var(--gradient-green);
   box-shadow: 0 0 20px var(--primary-glow);
 }
 .btn-primary:hover {
@@ -217,7 +220,7 @@ body::before {
 }
 .btn-outline:hover {
   border-color: var(--primary);
-  background: rgba(37, 99, 235, 0.1);
+  background: rgba(27, 144, 88, 0.1);
   box-shadow: 0 0 20px var(--primary-glow);
 }
 
@@ -231,12 +234,12 @@ body::before {
 .glass-card:hover {
   border-color: var(--border-hover);
   background: var(--surface-hover);
-  box-shadow: 0 8px 40px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 8px 40px rgba(27, 144, 88, 0.18);
   transform: translateY(-4px);
 }
 
 .glow-text {
-  background: var(--gradient-blue);
+  background: var(--gradient-brand);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -252,8 +255,8 @@ body::before {
   letter-spacing: 0.1em;
   padding: 6px 16px;
   border-radius: 9999px;
-  background: rgba(37, 99, 235, 0.12);
-  border: 1px solid rgba(37, 99, 235, 0.25);
+  background: rgba(27, 144, 88, 0.12);
+  border: 1px solid rgba(27, 144, 88, 0.30);
   color: var(--accent);
 }
 
@@ -266,7 +269,7 @@ body::before {
   inset: 0;
   padding: 1px;
   border-radius: inherit;
-  background: var(--gradient-blue);
+  background: var(--gradient-brand);
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);

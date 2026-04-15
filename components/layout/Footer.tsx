@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { Zap, MapPin, Phone, Mail, ArrowUpRight } from "lucide-react";
+import { MapPin, Phone, Mail, ArrowUpRight } from "lucide-react";
 import { services, industries } from "@/lib/data";
 
 const footerLinks = {
@@ -82,10 +83,10 @@ const contactDetails = [
   {
     icon: MapPin,
     value: "123 Liverpool Street, London, EC2M 7PY",
-    color: "#2563eb",
+    color: "#1b9058",
   },
-  { icon: Phone, value: "+44 20 7123 4567", color: "#06b6d4" },
-  { icon: Mail, value: "hello@sparxgrowth.co.uk", color: "#8b5cf6" },
+  { icon: Phone, value: "+44 20 7123 4567", color: "#ffde59" },
+  { icon: Mail, value: "hello@sparxgrowth.co.uk", color: "#22b56c" },
 ];
 
 const trust = [
@@ -97,24 +98,24 @@ const trust = [
 
 export function Footer() {
   return (
-    <footer className="relative bg-[#020818] overflow-hidden flex flex-col">
+    <footer className="relative bg-[#030f07] overflow-hidden flex flex-col">
       {/* ── Top gradient border ── */}
       <div
         className="absolute top-0 left-0 right-0 h-px"
         style={{
           background:
-            "linear-gradient(90deg, transparent 0%, #2563eb 35%, #06b6d4 65%, transparent 100%)",
+            "linear-gradient(90deg, transparent 0%, #064226 25%, #1b9058 50%, #ffde59 75%, transparent 100%)",
         }}
       />
 
       {/* ── Ambient glows ── */}
       <div
-        className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-[120px] opacity-[0.07] pointer-events-none"
-        style={{ background: "#2563eb" }}
+        className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-[120px] opacity-[0.08] pointer-events-none"
+        style={{ background: "#064226" }}
       />
       <div
-        className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full blur-[120px] opacity-[0.06] pointer-events-none"
-        style={{ background: "#06b6d4" }}
+        className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full blur-[120px] opacity-[0.07] pointer-events-none"
+        style={{ background: "#1b9058" }}
       />
 
       {/* ─────────────────────────────────────────
@@ -127,21 +128,20 @@ export function Footer() {
             <div className="max-w-sm">
               <Link
                 href="/"
-                className="inline-flex items-center gap-3 group mb-5"
+                className="inline-flex items-center group mb-5"
               >
                 <motion.div
-                  className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-                  style={{
-                    background: "linear-gradient(135deg, #2563eb, #06b6d4)",
-                  }}
-                  whileHover={{ rotate: 15, scale: 1.1 }}
+                  whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <Zap size={20} className="text-white" fill="white" />
+                  <Image
+                    src="/SparxGrowth Logo.png"
+                    alt="SparxGrowth"
+                    width={150}
+                    height={42}
+                    className="h-11 w-auto object-contain"
+                  />
                 </motion.div>
-                <span className="font-heading font-bold text-2xl text-white tracking-tight">
-                  Sparx<span className="glow-text">Growth</span>
-                </span>
               </Link>
               <p className="text-white/50 text-sm leading-relaxed mb-6">
                 London&apos;s digital growth partner. We combine data-driven
@@ -176,7 +176,7 @@ export function Footer() {
                   <span
                     className="text-2xl font-heading font-bold mb-0.5"
                     style={{
-                      background: "linear-gradient(135deg, #60a5fa, #06b6d4)",
+                      background: "linear-gradient(135deg, #1b9058, #ffde59)",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
                       backgroundClip: "text",
@@ -251,7 +251,8 @@ export function Footer() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-1.5 mt-5 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors group"
+                className="inline-flex items-center gap-1.5 mt-5 text-xs font-semibold transition-colors group"
+                style={{ color: '#ffde59' }}
               >
                 Book a free call
                 <ArrowUpRight

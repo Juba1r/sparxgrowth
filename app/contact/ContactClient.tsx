@@ -6,10 +6,10 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { MapPin, Phone, Mail, Clock, CheckCircle, Send } from "lucide-react";
 
 const contactInfo = [
-  { icon: MapPin, label: "Office", value: "123 Liverpool Street, London, EC2M 7PY", color: "#2563eb" },
-  { icon: Phone, label: "Phone", value: "+44 20 7123 4567", color: "#06b6d4" },
-  { icon: Mail, label: "Email", value: "hello@sparxgrowth.co.uk", color: "#8b5cf6" },
-  { icon: Clock, label: "Hours", value: "Mon–Fri: 9am–6pm GMT", color: "#10b981" },
+  { icon: MapPin, label: "Office", value: "123 Liverpool Street, London, EC2M 7PY", color: "#1b9058" },
+  { icon: Phone, label: "Phone", value: "+44 20 7123 4567", color: "#ffde59" },
+  { icon: Mail, label: "Email", value: "hello@sparxgrowth.co.uk", color: "#1b9058" },
+  { icon: Clock, label: "Hours", value: "Mon–Fri: 9am–6pm GMT", color: "#ffde59" },
 ];
 
 export function ContactClient() {
@@ -72,7 +72,7 @@ export function ContactClient() {
                     <div key={i} className="flex items-start gap-2.5 text-sm text-white/60">
                       <div
                         className="w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold text-white shrink-0 mt-0.5"
-                        style={{ background: "linear-gradient(135deg, #2563eb, #06b6d4)" }}
+                        style={{ background: "linear-gradient(135deg, #064226, #1b9058)" }}
                       >
                         {i + 1}
                       </div>
@@ -104,7 +104,7 @@ export function ContactClient() {
                           type={field.type}
                           required
                           placeholder={field.placeholder}
-                          className="w-full bg-white/[0.05] border border-white/[0.1] rounded-xl px-4 py-3 text-white text-sm placeholder:text-white/30 outline-none focus:border-blue-500/50 transition-colors"
+                          className="w-full bg-white/[0.05] border border-white/[0.1] rounded-xl px-4 py-3 text-white text-sm placeholder:text-white/30 outline-none focus:border-[#1b9058]/50 transition-colors"
                           value={formData[field.id as keyof typeof formData]}
                           onChange={(e) => setFormData((p) => ({ ...p, [field.id]: e.target.value }))}
                         />
@@ -115,7 +115,7 @@ export function ContactClient() {
                   <div>
                     <label className="block text-sm font-medium text-white/60 mb-2">Monthly Budget</label>
                     <select
-                      className="w-full bg-white/[0.05] border border-white/[0.1] rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-blue-500/50 transition-colors"
+                      className="w-full bg-white/[0.05] border border-white/[0.1] rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-[#1b9058]/50 transition-colors"
                       value={formData.budget}
                       onChange={(e) => setFormData((p) => ({ ...p, budget: e.target.value }))}
                     >
@@ -131,7 +131,7 @@ export function ContactClient() {
                     <textarea
                       rows={4}
                       placeholder="Describe your business, current challenges, and what you'd like to achieve..."
-                      className="w-full bg-white/[0.05] border border-white/[0.1] rounded-xl px-4 py-3 text-white text-sm placeholder:text-white/30 outline-none focus:border-blue-500/50 transition-colors resize-none"
+                      className="w-full bg-white/[0.05] border border-white/[0.1] rounded-xl px-4 py-3 text-white text-sm placeholder:text-white/30 outline-none focus:border-[#1b9058]/50 transition-colors resize-none"
                       value={formData.message}
                       onChange={(e) => setFormData((p) => ({ ...p, message: e.target.value }))}
                     />
@@ -140,7 +140,7 @@ export function ContactClient() {
                   <motion.button
                     type="submit"
                     className="w-full flex items-center justify-center gap-2.5 py-4 rounded-full text-sm font-bold text-white"
-                    style={{ background: "linear-gradient(135deg, #2563eb, #06b6d4)" }}
+                    style={{ background: "linear-gradient(135deg, #064226, #1b9058)" }}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
@@ -159,7 +159,7 @@ export function ContactClient() {
                     animate={{ scale: 1 }}
                     transition={{ type: "spring", stiffness: 200 }}
                     className="w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center"
-                    style={{ background: "linear-gradient(135deg, #2563eb, #06b6d4)" }}
+                    style={{ background: "linear-gradient(135deg, #064226, #1b9058)" }}
                   >
                     <CheckCircle size={32} className="text-white" />
                   </motion.div>

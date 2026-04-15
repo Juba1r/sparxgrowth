@@ -18,7 +18,7 @@ export function TestimonialsSection() {
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute w-96 h-96 rounded-full blur-3xl opacity-[0.06]"
-          style={{ background: "#2563eb", top: "30%", right: "5%" }}
+          style={{ background: "#1b9058", top: "30%", right: "5%" }}
         />
       </div>
 
@@ -47,7 +47,8 @@ export function TestimonialsSection() {
             >
               <Quote
                 size={36}
-                className="mx-auto mb-6 opacity-20 text-blue-400"
+                className="mx-auto mb-6 opacity-20"
+                style={{ color: '#1b9058' }}
               />
               <div className="flex justify-center gap-1 mb-5">
                 {[1, 2, 3, 4, 5].map((i) => (
@@ -61,9 +62,9 @@ export function TestimonialsSection() {
               <div
                 className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full text-sm font-semibold"
                 style={{
-                  background: "rgba(37,99,235,0.15)",
-                  border: "1px solid rgba(37,99,235,0.3)",
-                  color: "#60a5fa",
+                  background: "rgba(27,144,88,0.15)",
+                  border: "1px solid rgba(27,144,88,0.3)",
+                  color: "#1b9058",
                 }}
               >
                 {testimonials[active].result}
@@ -109,7 +110,7 @@ export function TestimonialsSection() {
                       layoutId="dot-active"
                       className="absolute inset-0 rounded-full"
                       style={{
-                        background: "linear-gradient(90deg, #2563eb, #06b6d4)",
+                        background: "linear-gradient(90deg, #064226, #1b9058)",
                       }}
                     />
                   )}

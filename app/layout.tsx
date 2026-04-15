@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Loader } from "@/components/layout/Loader";
 import { CursorFollower } from "@/components/ui/CursorFollower";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
+import { WhatsAppWidget } from "@/components/ui/WhatsAppWidget";
 
 export const metadata: Metadata = {
   title: {
@@ -65,6 +66,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <WhatsAppWidget />
       </body>
     </html>
   );

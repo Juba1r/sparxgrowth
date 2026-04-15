@@ -14,7 +14,7 @@ export function StatsSection() {
         className="absolute top-0 left-0 right-0 h-px"
         style={{
           background:
-            "linear-gradient(90deg, transparent, rgba(37,99,235,0.4), rgba(6,182,212,0.4), transparent)",
+            "linear-gradient(90deg, transparent, rgba(6,66,38,0.4), rgba(27,144,88,0.4), transparent)",
         }}
       />
 
@@ -30,22 +30,22 @@ export function StatsSection() {
         </AnimatedSection>
 
         <StaggeredList
-          className="w-full grid grid-cols-2 lg:grid-cols-4 gap-6 mx-auto justify-center"
+          className="w-full grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mx-auto justify-center"
           staggerDelay={0.12}
         >
           {stats.map((stat, i) => (
             <div
               key={i}
-              className="glass-card p-8 text-center relative overflow-hidden group"
+              className="glass-card p-4 sm:p-6 lg:p-8 text-center relative overflow-hidden group flex flex-col justify-center"
             >
               <div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 style={{
                   background:
-                    "radial-gradient(circle at 50% 0%, rgba(37,99,235,0.1) 0%, transparent 60%)",
+                    "radial-gradient(circle at 50% 0%, rgba(27,144,88,0.15) 0%, transparent 70%)",
                 }}
               />
-              <div className="text-5xl sm:text-6xl font-heading font-bold mb-2">
+              <div className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-1 sm:mb-2 whitespace-nowrap tracking-tight flex items-center justify-center">
                 <span className="glow-text">
                   <AnimatedCounter
                     value={stat.value}
@@ -66,7 +66,7 @@ export function StatsSection() {
         className="absolute bottom-0 left-0 right-0 h-px"
         style={{
           background:
-            "linear-gradient(90deg, transparent, rgba(37,99,235,0.2), transparent)",
+            "linear-gradient(90deg, transparent, rgba(27,144,88,0.3), transparent)",
         }}
       />
     </section>

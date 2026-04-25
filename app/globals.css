@@ -1,4 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Barriecito&display=swap");
+
+@font-face {
+  font-family: "Sunborn";
+  src: url("/font files/Sunborn-SansOne.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sunborn";
+  src: url("/font files/Sunborn-SansOneSlant.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
 @import "tailwindcss";
 @config "../tailwind.config.ts";
 
@@ -117,14 +133,23 @@ body {
 
 h1,
 h2,
-h3,
+h3 {
+  font-family: "Sunborn", "Plus Jakarta Sans", sans-serif;
+  font-weight: normal;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+}
+
 h4,
 h5,
 h6 {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.subheading {
+  font-family: "Barriecito", cursive;
 }
 
 /* Scrollbar */

@@ -24,7 +24,7 @@ export function FinalCTASection() {
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-white mt-4 mb-6 leading-tight">
             Ready to <span className="glow-text">Accelerate</span> Your Growth?
           </h2>
-          <p className="text-white/60 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+          <p className="text-white/60 text-lg leading-relaxed mb-10 max-w-2xl mx-auto font-subheading">
             Book a free 30-minute strategy call with our London-based team. No fluff, just honest advice and a clear roadmap.
           </p>
 

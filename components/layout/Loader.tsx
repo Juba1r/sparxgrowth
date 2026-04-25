@@ -55,9 +55,9 @@ export function Loader() {
                 <Image
                   src="/SparxGrowth Logo.png"
                   alt="SparxGrowth"
-                  width={220}
-                  height={60}
-                  className="h-16 w-auto object-contain drop-shadow-[0_0_15px_rgba(27,144,88,0.5)]"
+                  width={420}
+                  height={120}
+                  className="h-36 w-auto object-contain drop-shadow-[0_0_20px_rgba(27,144,88,0.6)]"
                   priority
                 />
               </motion.div>

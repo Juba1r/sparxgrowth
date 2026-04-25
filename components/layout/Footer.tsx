@@ -137,9 +137,9 @@ export function Footer() {
                   <Image
                     src="/SparxGrowth Logo.png"
                     alt="SparxGrowth"
-                    width={150}
-                    height={42}
-                    className="h-11 w-auto object-contain"
+                    width={280}
+                    height={76}
+                    className="h-20 w-auto object-contain"
                   />
                 </motion.div>
               </Link>
@@ -170,21 +170,16 @@ export function Footer() {
               {trust.map((t, i) => (
                 <motion.div
                   key={i}
-                  whileHover={{ y: -2 }}
-                  className="flex flex-col items-center text-center px-5 py-4 rounded-2xl border border-white/[0.06] bg-white/[0.02]"
+                  whileHover={{ y: -4 }}
+                  className="flex flex-col items-center text-center px-8 py-8 rounded-2xl border border-white/[0.06] bg-white/[0.02]"
                 >
                   <span
-                    className="text-2xl font-heading font-bold mb-0.5"
-                    style={{
-                      background: "linear-gradient(135deg, #1b9058, #ffde59)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      backgroundClip: "text",
-                    }}
+                    className="text-4xl font-heading font-bold mb-1"
+                    style={{ color: "#ffde59" }}
                   >
                     {t.stat}
                   </span>
-                  <span className="text-xs text-white/40 font-medium">
+                  <span className="text-sm text-white/40 font-medium">
                     {t.label}
                   </span>
                 </motion.div>

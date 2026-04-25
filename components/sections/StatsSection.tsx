@@ -24,7 +24,7 @@ export function StatsSection() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white tracking-tight text-balance max-w-3xl">
             Numbers That <span className="glow-text">Speak for Themselves</span>
           </h2>
-          <p className="text-white/60 max-w-2xl text-lg leading-relaxed text-balance">
+          <p className="text-white/60 max-w-2xl text-lg leading-relaxed text-balance font-subheading">
             Real results, delivered for real London businesses.
           </p>
         </AnimatedSection>
@@ -46,7 +46,7 @@ export function StatsSection() {
                 }}
               />
               <div className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-1 sm:mb-2 whitespace-nowrap tracking-tight flex items-center justify-center">
-                <span className="glow-text">
+                <span style={{ color: "#ffde59" }}>
                   <AnimatedCounter
                     value={stat.value}
                     suffix={stat.suffix}

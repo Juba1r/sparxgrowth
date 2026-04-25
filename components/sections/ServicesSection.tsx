@@ -58,7 +58,7 @@ export function ServicesSection({
               Everything You Need to{" "}
               <span className="glow-text">Dominate Online</span>
             </h2>
-            <p className="text-white/60 max-w-2xl text-lg leading-relaxed text-balance">
+            <p className="text-white/60 max-w-2xl text-lg leading-relaxed text-balance font-subheading">
               Full-stack digital marketing services that work together to
               maximise your growth.
             </p>

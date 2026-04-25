@@ -10,7 +10,8 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["Inter", "sans-serif"],
-        heading: ["Plus Jakarta Sans", "sans-serif"],
+        heading: ["Sunborn", "Plus Jakarta Sans", "sans-serif"],
+        subheading: ["Barriecito", "cursive"],
       },
       colors: {
         background: "#030f07",

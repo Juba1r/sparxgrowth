@@ -83,9 +83,9 @@ export function Navbar() {
               <Image
                 src="/SparxGrowth Logo.png"
                 alt="SparxGrowth"
-                width={180}
-                height={52}
-                className="h-14 w-auto object-contain"
+                width={320}
+                height={90}
+                className="h-28 w-auto object-contain"
                 priority
               />
             </motion.div>
@@ -132,9 +132,9 @@ export function Navbar() {
               <Image
                 src="/SparxGrowth Logo.png"
                 alt="SparxGrowth"
-                width={170}
-                height={48}
-                className="h-12 w-auto object-contain"
+                width={300}
+                height={84}
+                className="h-24 w-auto object-contain"
                 priority
               />
             </motion.div>
@@ -303,9 +303,9 @@ export function Navbar() {
                 <Image
                   src="/SparxGrowth Logo.png"
                   alt="SparxGrowth"
-                  width={170}
-                  height={48}
-                  className="h-12 w-auto object-contain"
+                  width={300}
+                  height={84}
+                  className="h-24 w-auto object-contain"
                 />
               </Link>
               <button onClick={() => setMobileOpen(false)} className="p-2 text-white/70 hover:text-white">

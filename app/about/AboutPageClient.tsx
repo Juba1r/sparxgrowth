@@ -130,7 +130,7 @@ export function AboutPageClient() {
               London&apos;s Most{" "}
               <span className="glow-text">Results-Driven</span> Agency
             </h1>
-            <p className="text-white/60 text-xl leading-relaxed max-w-2xl mx-auto">
+            <p className="text-white/60 text-xl leading-relaxed max-w-2xl mx-auto font-subheading">
               Founded in 2018, SparxGrowth has helped 250+ brands across London
               and the UK achieve extraordinary digital growth. We combine
               strategic thinking with technical excellence.

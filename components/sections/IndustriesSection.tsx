@@ -56,7 +56,7 @@ export function IndustriesSection({
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white tracking-tight text-balance max-w-3xl">
               We Know Your <span className="glow-text">Industry</span>
             </h2>
-            <p className="text-white/60 max-w-2xl text-lg leading-relaxed text-balance">
+            <p className="text-white/60 max-w-2xl text-lg leading-relaxed text-balance font-subheading">
               Sector-specific expertise means campaigns that resonate with your
               exact audience.
             </p>

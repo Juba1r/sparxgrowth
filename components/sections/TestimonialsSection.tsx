@@ -28,7 +28,7 @@ export function TestimonialsSection() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white tracking-tight text-balance max-w-3xl">
             Loved by <span className="glow-text">250+ Brands</span>
           </h2>
-          <p className="text-white/60 max-w-2xl text-lg leading-relaxed text-balance">
+          <p className="text-white/60 max-w-2xl text-lg leading-relaxed text-balance font-subheading">
             Don&apos;t take our word for it — hear from the brands we&apos;ve
             helped grow.
           </p>

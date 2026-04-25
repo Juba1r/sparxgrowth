@@ -17,8 +17,8 @@ export default function IndustriesPage() {
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-heading font-bold text-white mb-6">
             Industries We <span className="glow-text">Specialise In</span>
           </h1>
-          <p className="text-white/60 text-xl leading-relaxed max-w-2xl mx-auto">
-            Deep industry knowledge means campaigns that truly resonate with your target audience.
+          <p className="text-white/60 text-xl leading-relaxed max-w-2xl mx-auto font-subheading">
+            Sector-specific digital marketing strategies that resonate with your exact audience.
           </p>
         </AnimatedSection>
       </div>

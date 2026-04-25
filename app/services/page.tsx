@@ -17,7 +17,7 @@ export default function ServicesPage() {
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-heading font-bold text-white mb-6">
             Our <span className="glow-text">Services</span>
           </h1>
-          <p className="text-white/60 text-xl leading-relaxed max-w-2xl mx-auto">
+          <p className="text-white/60 text-xl leading-relaxed max-w-2xl mx-auto font-subheading">
             A complete suite of digital marketing services designed to fuel your growth and maximise ROI.
           </p>
         </AnimatedSection>

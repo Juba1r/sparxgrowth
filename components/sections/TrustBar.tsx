@@ -35,7 +35,7 @@ export function TrustBar() {
                 key={i}
                 className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/[0.06] bg-white/[0.02] whitespace-nowrap"
               >
-                <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 flex-shrink-0" />
+                <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "#1b9058" }} />
                 <span className="text-sm font-medium text-white/40">{client}</span>
               </div>
             ))}

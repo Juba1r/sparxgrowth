@@ -18,7 +18,7 @@ export function BlogPreview() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white tracking-tight text-balance max-w-3xl">
             From the <span className="glow-text">SparxGrowth Blog</span>
           </h2>
-          <p className="text-white/60 max-w-2xl text-lg leading-relaxed text-balance">
+          <p className="text-white/60 max-w-2xl text-lg leading-relaxed text-balance font-subheading">
             Marketing tips, growth hacks, and industry insights from our London
             team.
           </p>
@@ -43,18 +43,18 @@ export function BlogPreview() {
                 <div
                   className="relative h-48 overflow-hidden flex-shrink-0"
                   style={{
-                    background: "linear-gradient(135deg, #0a1628, #1e3a8a)",
+                    background: "linear-gradient(135deg, #064226, #1b9058)",
                   }}
                 >
                   <div className="absolute inset-0 flex items-center justify-center opacity-30 group-hover:opacity-50 transition-opacity">
-                    <div className="w-24 h-24 rounded-full border border-blue-400/30" />
-                    <div className="absolute w-16 h-16 rounded-full border border-cyan-400/20" />
+                    <div className="w-24 h-24 rounded-full border border-[#1b9058]/40" />
+                    <div className="absolute w-16 h-16 rounded-full border border-[#ffde59]/20" />
                   </div>
                   <div
-                    className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold text-cyan-400"
+                    className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold text-[#ffde59]"
                     style={{
-                      background: "rgba(6,182,212,0.15)",
-                      border: "1px solid rgba(6,182,212,0.25)",
+                      background: "rgba(27,144,88,0.15)",
+                      border: "1px solid rgba(27,144,88,0.25)",
                     }}
                   >
                     {post.category}
@@ -69,13 +69,13 @@ export function BlogPreview() {
                     </span>
                     <span>{post.date}</span>
                   </div>
-                  <h3 className="text-white font-semibold text-base leading-snug mb-3 group-hover:text-blue-300 transition-colors">
+                  <h3 className="text-white font-semibold text-base leading-snug mb-3 group-hover:text-[#ffde59] transition-colors">
                     {post.title}
                   </h3>
                   <p className="text-white/50 text-sm leading-relaxed line-clamp-2 mb-4 flex-1">
                     {post.excerpt}
                   </p>
-                  <div className="flex items-center gap-1.5 text-sm font-semibold text-blue-400 group-hover:gap-3 transition-all duration-300 mt-auto">
+                  <div className="flex items-center gap-1.5 text-sm font-semibold text-[#ffde59] group-hover:gap-3 transition-all duration-300 mt-auto">
                     Read More <ArrowRight size={13} />
                   </div>
                 </div>

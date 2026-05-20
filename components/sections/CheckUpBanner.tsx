@@ -20,20 +20,20 @@ export function CheckUpBanner() {
       <div className="section-container">
         <AnimatedSection>
           <div className="relative rounded-3xl overflow-hidden p-px"
-            style={{ background: "linear-gradient(135deg, #064226, #1b9058, #064226)" }}>
-            <div className="relative rounded-[calc(1.5rem-1px)] p-8 sm:p-12 lg:p-16"
-              style={{ background: "linear-gradient(135deg, #020d06 0%, #061a0e 50%, #020d06 100%)" }}>
+            style={{ background: "linear-gradient(135deg, var(--accent), var(--primary-light), var(--accent))" }}>
+            <div className="relative rounded-[calc(1.5rem-1px)] p-8 sm:p-12 lg:p-16 dark-section"
+              style={{ background: "linear-gradient(135deg, #0c2b1f 0%, #123527 50%, #0c2b1f 100%)" }}>
 
               {/* Glow orbs */}
               <div className="absolute top-0 right-0 w-80 h-80 rounded-full blur-3xl opacity-20 pointer-events-none"
-                style={{ background: "radial-gradient(circle, #1b9058, transparent)" }} />
+                style={{ background: "radial-gradient(circle, var(--primary-light), transparent)" }} />
               <div className="absolute bottom-0 left-0 w-60 h-60 rounded-full blur-3xl opacity-15 pointer-events-none"
-                style={{ background: "radial-gradient(circle, #ffde59, transparent)" }} />
+                style={{ background: "radial-gradient(circle, var(--accent), transparent)" }} />
 
               {/* Center-aligned header */}
               <div className="relative text-center mb-10">
                 <div className="inline-flex items-center gap-2 mb-5 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest border"
-                  style={{ color: '#ffde59', borderColor: 'rgba(255,222,89,0.35)', background: 'rgba(255,222,89,0.07)' }}>
+                  style={{ color: 'var(--accent)', borderColor: 'var(--accent-glow)', background: 'rgba(197,155,39,0.07)' }}>
                   <motion.span animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>✦</motion.span>
                   Free &amp; No Obligation
                 </div>
@@ -61,7 +61,7 @@ export function CheckUpBanner() {
                     className="flex items-center gap-3 p-4 rounded-xl"
                     style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.06)" }}
                   >
-                    <CheckCircle size={16} className="shrink-0" style={{ color: '#1b9058' }} />
+                    <CheckCircle size={16} className="shrink-0" style={{ color: 'var(--accent)' }} />
                     <span className="text-sm text-white/80 font-medium">{benefit}</span>
                   </motion.div>
                 ))}

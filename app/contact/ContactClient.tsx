@@ -72,7 +72,7 @@ export function ContactClient() {
                     <div key={i} className="flex items-start gap-2.5 text-sm text-white/60">
                       <div
                         className="w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold text-white shrink-0 mt-0.5"
-                        style={{ background: "linear-gradient(135deg, #064226, #1b9058)" }}
+                        style={{ background: "linear-gradient(135deg, #123527, #1C4D38)" }}
                       >
                         {i + 1}
                       </div>
@@ -119,9 +119,9 @@ export function ContactClient() {
                       value={formData.budget}
                       onChange={(e) => setFormData((p) => ({ ...p, budget: e.target.value }))}
                     >
-                      <option value="" className="bg-[#020818]">Select your budget</option>
+                      <option value="">Select your budget</option>
                       {["£500–£1,000", "£1,000–£3,000", "£3,000–£5,000", "£5,000–£10,000", "£10,000+"].map((b) => (
-                        <option key={b} value={b} className="bg-[#020818]">{b}</option>
+                        <option key={b} value={b}>{b}</option>
                       ))}
                     </select>
                   </div>
@@ -139,12 +139,12 @@ export function ContactClient() {
 
                   <motion.button
                     type="submit"
-                    className="w-full flex items-center justify-center gap-2.5 py-4 rounded-full text-sm font-bold text-white"
-                    style={{ background: "linear-gradient(135deg, #064226, #1b9058)" }}
+                    className="w-full flex items-center justify-center gap-2.5 py-4 rounded-full text-sm font-bold text-white keep-white"
+                    style={{ background: "linear-gradient(135deg, #123527, #1C4D38)" }}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    <Send size={16} />
+                    <Send size={16} className="text-white keep-white" />
                     Send My Enquiry
                   </motion.button>
 
@@ -159,9 +159,9 @@ export function ContactClient() {
                     animate={{ scale: 1 }}
                     transition={{ type: "spring", stiffness: 200 }}
                     className="w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center"
-                    style={{ background: "linear-gradient(135deg, #064226, #1b9058)" }}
+                    style={{ background: "linear-gradient(135deg, #123527, #1C4D38)" }}
                   >
-                    <CheckCircle size={32} className="text-white" />
+                    <CheckCircle size={32} className="text-white keep-white" />
                   </motion.div>
                   <h3 className="text-2xl font-heading font-bold text-white mb-3">Message Received!</h3>
                   <p className="text-white/60">

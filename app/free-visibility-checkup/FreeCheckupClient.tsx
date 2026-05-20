@@ -129,9 +129,9 @@ export function FreeCheckupClient() {
                             value={formData[field.id] || ""}
                             onChange={(e) => setFormData((p) => ({ ...p, [field.id]: e.target.value }))}
                           >
-                            <option value="" disabled className="bg-[#020818]">Select your industry</option>
+                            <option value="" disabled>Select your industry</option>
                             {field.options?.map((opt) => (
-                              <option key={opt} value={opt} className="bg-[#020818]">{opt}</option>
+                              <option key={opt} value={opt}>{opt}</option>
                             ))}
                           </select>
                         ) : (
@@ -224,9 +224,9 @@ export function FreeCheckupClient() {
               animate={{ scale: 1 }}
               transition={{ type: "spring", stiffness: 200, delay: 0.1 }}
               className="w-24 h-24 rounded-full mx-auto mb-8 flex items-center justify-center"
-              style={{ background: "linear-gradient(135deg, #064226, #1b9058)" }}
+              style={{ background: "linear-gradient(135deg, #123527, #1C4D38)" }}
             >
-              <Sparkles size={36} className="text-white" />
+              <Sparkles size={36} className="text-white keep-white" />
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -252,7 +252,7 @@ export function FreeCheckupClient() {
             >
               {["Full SEO audit", "Competitor analysis", "Quick wins roadmap"].map((item) => (
                 <div key={item} className="flex items-center gap-3 justify-center text-sm text-white/60">
-                  <CheckCircle size={16} className="text-[#1b9058]" />
+                  <CheckCircle size={16} className="text-[#C59B27]" />
                   {item}
                 </div>
               ))}

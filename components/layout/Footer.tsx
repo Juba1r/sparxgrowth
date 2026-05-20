@@ -98,24 +98,24 @@ const trust = [
 
 export function Footer() {
   return (
-    <footer className="relative bg-[#030f07] overflow-hidden flex flex-col">
+    <footer className="relative bg-[#123527] overflow-hidden flex flex-col dark-section">
       {/* ── Top gradient border ── */}
       <div
         className="absolute top-0 left-0 right-0 h-px"
         style={{
           background:
-            "linear-gradient(90deg, transparent 0%, #064226 25%, #1b9058 50%, #ffde59 75%, transparent 100%)",
+            "linear-gradient(90deg, transparent 0%, var(--primary-light) 25%, var(--accent) 50%, var(--accent) 75%, transparent 100%)",
         }}
       />
 
       {/* ── Ambient glows ── */}
       <div
         className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-[120px] opacity-[0.08] pointer-events-none"
-        style={{ background: "#064226" }}
+        style={{ background: "var(--primary-light)" }}
       />
       <div
         className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full blur-[120px] opacity-[0.07] pointer-events-none"
-        style={{ background: "#1b9058" }}
+        style={{ background: "var(--primary-light)" }}
       />
 
       {/* ─────────────────────────────────────────
@@ -132,15 +132,15 @@ export function Footer() {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <Image
-                    src="/SparxGrowth Logo.png"
+                    src="/logo-light.png"
                     alt="SparxGrowth"
                     width={280}
-                    height={76}
+                    height={108}
                     className="h-20 w-auto object-contain"
                   />
                 </motion.div>
               </Link>
-              <p className="text-white/50 text-sm leading-relaxed mb-6">
+              <p className="text-white/70 text-sm leading-relaxed mb-6">
                 London&apos;s digital growth partner. We combine data-driven
                 strategy with creative execution to help ambitious brands
                 dominate their market.
@@ -154,7 +154,7 @@ export function Footer() {
                     aria-label={label}
                     whileHover={{ y: -3, scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-9 h-9 rounded-xl border border-white/[0.08] bg-white/[0.03] flex items-center justify-center text-white/50 hover:text-white hover:border-white/20 hover:bg-white/[0.08] transition-all duration-200"
+                    className="w-9 h-9 rounded-xl border border-white/[0.08] bg-white/[0.03] flex items-center justify-center text-white/70 hover:text-white hover:border-white/20 hover:bg-white/[0.08] transition-all duration-200"
                   >
                     {svg}
                   </motion.a>
@@ -176,7 +176,7 @@ export function Footer() {
                   >
                     {t.stat}
                   </span>
-                  <span className="text-sm text-white/40 font-medium">
+                  <span className="text-sm text-white/60 font-medium">
                     {t.label}
                   </span>
                 </motion.div>
@@ -203,7 +203,7 @@ export function Footer() {
                     <li key={link.label}>
                       <Link
                         href={link.href}
-                        className="group inline-flex items-center gap-1 text-sm text-white/45 hover:text-white transition-colors duration-200"
+                        className="group inline-flex items-center gap-1 text-sm text-white/65 hover:text-white transition-colors duration-200"
                       >
                         <span className="group-hover:translate-x-0.5 transition-transform duration-200">
                           {link.label}
@@ -233,7 +233,7 @@ export function Footer() {
                       >
                         <Icon size={11} style={{ color }} />
                       </div>
-                      <span className="text-xs text-white/45 leading-relaxed">
+                      <span className="text-xs text-white/65 leading-relaxed">
                         {value}
                       </span>
                     </div>
@@ -263,7 +263,7 @@ export function Footer() {
       <div className="relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-white/30 text-center sm:text-left">
+            <p className="text-xs text-white/50 text-center sm:text-left">
               © {new Date().getFullYear()} SparxGrowth Ltd. All rights reserved.
               Registered in England &amp; Wales.
             </p>
@@ -271,19 +271,19 @@ export function Footer() {
             <div className="flex items-center gap-6">
               <Link
                 href="#"
-                className="text-xs text-white/30 hover:text-white/60 transition-colors"
+                className="text-xs text-white/50 hover:text-white transition-colors"
               >
                 Privacy
               </Link>
               <Link
                 href="#"
-                className="text-xs text-white/30 hover:text-white/60 transition-colors"
+                className="text-xs text-white/50 hover:text-white transition-colors"
               >
                 Terms
               </Link>
               <Link
                 href="#"
-                className="text-xs text-white/30 hover:text-white/60 transition-colors"
+                className="text-xs text-white/50 hover:text-white transition-colors"
               >
                 Cookies
               </Link>
@@ -291,7 +291,7 @@ export function Footer() {
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-8 h-8 rounded-xl border border-white/[0.08] bg-white/[0.03] flex items-center justify-center text-white/40 hover:text-white hover:border-white/20 transition-all"
+                className="w-8 h-8 rounded-xl border border-white/[0.08] bg-white/[0.03] flex items-center justify-center text-white/60 hover:text-white hover:border-white/20 transition-all"
                 aria-label="Back to top"
               >
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">

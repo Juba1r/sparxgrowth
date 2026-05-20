@@ -19,36 +19,36 @@
 @config "../tailwind.config.ts";
 
 :root {
-  --background: #030f07;
-  --foreground: #edf5f0;
-  --primary: #1b9058;
-  --primary-light: #22b56c;
-  --primary-glow: rgba(27, 144, 88, 0.45);
-  --accent: #ffde59;
-  --accent-glow: rgba(255, 222, 89, 0.35);
-  --deep-green: #064226;
-  --surface: rgba(27, 144, 88, 0.05);
-  --surface-hover: rgba(27, 144, 88, 0.1);
-  --border: rgba(27, 144, 88, 0.15);
-  --border-hover: rgba(27, 144, 88, 0.35);
-  --text-primary: #edf5f0;
-  --text-secondary: #8fb89d;
-  --text-muted: #5a7a64;
+  --background: #F5F0E6;
+  --foreground: #123527;
+  --primary: #123527;
+  --primary-light: #1C4D38;
+  --primary-glow: rgba(18, 53, 39, 0.15);
+  --accent: #C59B27;
+  --accent-glow: rgba(197, 155, 39, 0.25);
+  --deep-green: #123527;
+  --surface: #EAE3D5;
+  --surface-hover: #E3DAC9;
+  --border: rgba(18, 53, 39, 0.12);
+  --border-hover: rgba(18, 53, 39, 0.25);
+  --text-primary: #123527;
+  --text-secondary: #2E4E3F;
+  --text-muted: #5C7569;
   --gradient-hero: linear-gradient(
     135deg,
-    #030f07 0%,
-    #064226 50%,
-    #030f07 100%
+    #F5F0E6 0%,
+    #EADFCB 50%,
+    #F5F0E6 100%
   );
-  --gradient-brand: linear-gradient(135deg, #064226, #1b9058, #ffde59);
-  --gradient-green: linear-gradient(135deg, #064226, #1b9058);
-  --gradient-gold: linear-gradient(135deg, #1b9058, #ffde59);
+  --gradient-brand: linear-gradient(135deg, #123527, #1C4D38, #C59B27);
+  --gradient-green: linear-gradient(135deg, #123527, #1C4D38);
+  --gradient-gold: linear-gradient(135deg, #1C4D38, #C59B27);
   --gradient-card: linear-gradient(
     145deg,
-    rgba(27, 144, 88, 0.08),
-    rgba(6, 66, 38, 0.04)
+    #FFFFFF,
+    #EAE3D5
   );
-  --color-background: #030f07;
+  --color-background: #F5F0E6;
 }
 
 * {
@@ -269,19 +269,34 @@ body::before {
   background-clip: text;
 }
 
+/* Dark container override for glow-text to avoid dark green blending with dark backgrounds */
+.dark-section .glow-text {
+  background-image: linear-gradient(135deg, var(--accent) 0%, #ffffff 50%, var(--accent) 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
 .section-tag {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 650;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   padding: 6px 16px;
   border-radius: 9999px;
-  background: rgba(27, 144, 88, 0.12);
-  border: 1px solid rgba(27, 144, 88, 0.3);
-  color: var(--accent);
+  background: rgba(18, 53, 39, 0.06);
+  border: 1px solid rgba(18, 53, 39, 0.18);
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+/* Dark mode / dark section override for section tags */
+:is(.dark-section, .bg-deep-green, .bg-primary, .bg-\[\#123527\], .bg-\[\#064226\], .bg-gradient-green, .bg-gradient-brand) .section-tag {
+  background: rgba(197, 155, 39, 0.08);
+  border: 1px solid rgba(197, 155, 39, 0.25);
+  color: var(--accent) !important;
 }
 
 .gradient-border {
@@ -414,3 +429,147 @@ body::before {
 .text-3xl.font-heading.font-bold.mb-1 {
   color: var(--accent) !important;
 }
+
+/* ─────────────────────────────────────────
+      Light Mode Class Overrides & Mappings
+   ───────────────────────────────────────── */
+
+/* 1. Map white texts to dark forest green/muted text in light mode, except in dark containers */
+.text-white:not(.keep-white) {
+  color: var(--text-primary) !important;
+}
+.text-white\/90:not(.keep-white) { color: var(--text-primary) !important; }
+.text-white\/85:not(.keep-white) { color: var(--text-primary) !important; }
+.text-white\/80:not(.keep-white) { color: var(--text-secondary) !important; }
+.text-white\/75:not(.keep-white) { color: var(--text-secondary) !important; }
+.text-white\/70:not(.keep-white) { color: var(--text-secondary) !important; }
+.text-white\/65:not(.keep-white) { color: var(--text-secondary) !important; }
+.text-white\/60:not(.keep-white) { color: var(--text-secondary) !important; }
+.text-white\/50:not(.keep-white) { color: var(--text-muted) !important; }
+.text-white\/45:not(.keep-white) { color: var(--text-muted) !important; }
+.text-white\/40:not(.keep-white) { color: var(--text-muted) !important; }
+.text-white\/30:not(.keep-white) { color: var(--text-muted) !important; }
+.text-white\/20:not(.keep-white) { color: var(--border) !important; }
+.text-white\/10:not(.keep-white) { color: var(--border) !important; }
+
+/* 2. Exceptions where text MUST remain white (e.g. on primary buttons, dark banners, and custom dark cards) */
+.dark-section {
+  color: #ffffff;
+}
+
+:is(.dark-section, .bg-deep-green, .bg-primary, .bg-\[\#123527\], .bg-\[\#064226\], .bg-gradient-green, .bg-gradient-brand, .keep-white) .text-white {
+  color: #ffffff !important;
+}
+:is(.dark-section, .bg-deep-green, .bg-primary, .bg-\[\#123527\], .bg-\[\#064226\], .bg-gradient-green, .bg-gradient-brand, .keep-white) .text-white\/90 {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+:is(.dark-section, .bg-deep-green, .bg-primary, .bg-\[\#123527\], .bg-\[\#064226\], .bg-gradient-green, .bg-gradient-brand, .keep-white) .text-white\/85 {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+:is(.dark-section, .bg-deep-green, .bg-primary, .bg-\[\#123527\], .bg-\[\#064226\], .bg-gradient-green, .bg-gradient-brand, .keep-white) .text-white\/80 {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+:is(.dark-section, .bg-deep-green, .bg-primary, .bg-\[\#123527\], .bg-\[\#064226\], .bg-gradient-green, .bg-gradient-brand, .keep-white) .text-white\/75 {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+:is(.dark-section, .bg-deep-green, .bg-primary, .bg-\[\#123527\], .bg-\[\#064226\], .bg-gradient-green, .bg-gradient-brand, .keep-white) .text-white\/70 {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+:is(.dark-section, .bg-deep-green, .bg-primary, .bg-\[\#123527\], .bg-\[\#064226\], .bg-gradient-green, .bg-gradient-brand, .keep-white) .text-white\/65 {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+:is(.dark-section, .bg-deep-green, .bg-primary, .bg-\[\#123527\], .bg-\[\#064226\], .bg-gradient-green, .bg-gradient-brand, .keep-white) .text-white\/60 {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+:is(.dark-section, .bg-deep-green, .bg-primary, .bg-\[\#123527\], .bg-\[\#064226\], .bg-gradient-green, .bg-gradient-brand, .keep-white) .text-white\/50 {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+:is(.dark-section, .bg-deep-green, .bg-primary, .bg-\[\#123527\], .bg-\[\#064226\], .bg-gradient-green, .bg-gradient-brand, .keep-white) .text-white\/45 {
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+:is(.dark-section, .bg-deep-green, .bg-primary, .bg-\[\#123527\], .bg-\[\#064226\], .bg-gradient-green, .bg-gradient-brand, .keep-white) .text-white\/40 {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+:is(.dark-section, .bg-deep-green, .bg-primary, .bg-\[\#123527\], .bg-\[\#064226\], .bg-gradient-green, .bg-gradient-brand, .keep-white) .text-white\/30 {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+:is(.dark-section, .bg-deep-green, .bg-primary, .bg-\[\#123527\], .bg-\[\#064226\], .bg-gradient-green, .bg-gradient-brand, .keep-white) .text-white\/20 {
+  color: rgba(255, 255, 255, 0.2) !important;
+}
+:is(.dark-section, .bg-deep-green, .bg-primary, .bg-\[\#123527\], .bg-\[\#064226\], .bg-gradient-green, .bg-gradient-brand, .keep-white) .text-white\/10 {
+  color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Ensure keep-white elements, primary buttons, and their children are fully white */
+.keep-white,
+.keep-white *,
+.btn-primary,
+.btn-primary * {
+  color: #ffffff !important;
+}
+
+/* Keep trust stats and numbers highlight clear */
+.text-accent,
+[style*="color: #ffde59"],
+[style*="color:#ffde59"],
+[style*="color: rgb(255, 222, 89)"] {
+  color: var(--accent) !important;
+}
+
+/* 3. Base Elements Form styling overrides for light mode */
+input, textarea, select {
+  background-color: rgba(18, 53, 39, 0.04) !important;
+  border: 1px solid rgba(18, 53, 39, 0.15) !important;
+  color: var(--text-primary) !important;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--primary) !important;
+  background-color: rgba(18, 53, 39, 0.07) !important;
+}
+input::placeholder, textarea::placeholder {
+  color: var(--text-muted) !important;
+  opacity: 0.65;
+}
+option {
+  background-color: var(--background) !important;
+  color: var(--text-primary) !important;
+}
+
+/* 4. Multi-step Check-up goal/budget buttons light mode overrides */
+button.border-white\/\[0\.1\],
+button.border-white\/\[0\.10\] {
+  border-color: rgba(18, 53, 39, 0.15) !important;
+  background-color: rgba(18, 53, 39, 0.03) !important;
+  color: var(--text-secondary) !important;
+}
+button.border-white\/\[0\.1\]:hover,
+button.border-white\/\[0\.10\]:hover {
+  border-color: rgba(18, 53, 39, 0.3) !important;
+  background-color: rgba(18, 53, 39, 0.06) !important;
+  color: var(--text-primary) !important;
+}
+button.bg-\[\#1b9058\]\/15 {
+  background-color: rgba(18, 53, 39, 0.1) !important;
+  border-color: rgba(18, 53, 39, 0.5) !important;
+  color: var(--text-primary) !important;
+}
+
+/* 5. Custom Card Styling tweaks - Adding a solid left green vertical strip matching Screenshot 4 */
+.glass-card {
+  border-left: 4px solid var(--primary) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 20px rgba(18, 53, 39, 0.03) !important;
+}
+.glass-card:hover {
+  box-shadow: 0 8px 30px rgba(18, 53, 39, 0.08) !important;
+}
+
+/* 6. Fix for cursor follower to be visible in light mode */
+#cursor-follower {
+  border-color: rgba(18, 53, 39, 0.5) !important;
+  mix-blend-mode: difference !important;
+}
+#cursor-dot {
+  background-color: var(--primary) !important;
+}
+

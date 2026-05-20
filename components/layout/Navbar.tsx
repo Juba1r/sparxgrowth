@@ -70,7 +70,7 @@ export function Navbar() {
               ? "hidden"
               : "lg:hidden",
             scrolled
-              ? "h-16 bg-[#030f07]/95 backdrop-blur-xl border-b border-white/[0.07] shadow-lg shadow-black/30"
+              ? "h-16 bg-[#F5F0E6]/95 backdrop-blur-xl border-b border-[#123527]/10 shadow-lg shadow-black/5"
               : "h-20 bg-transparent"
           )}
         >
@@ -81,11 +81,11 @@ export function Navbar() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Image
-                src="/SparxGrowth Logo.png"
+                src="/logo-dark.png"
                 alt="SparxGrowth"
-                width={320}
-                height={90}
-                className="h-28 w-auto object-contain"
+                width={154}
+                height={60}
+                className="h-11 w-auto object-contain logo-forest"
                 priority
               />
             </motion.div>
@@ -94,7 +94,7 @@ export function Navbar() {
           {/* Hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="p-2.5 rounded-xl text-white/70 hover:text-white hover:bg-white/[0.07] transition-all"
+            className="p-2.5 rounded-xl text-primary/70 hover:text-primary hover:bg-primary/[0.05] transition-all"
           >
             <AnimatePresence mode="wait">
               {mobileOpen ? (
@@ -119,7 +119,7 @@ export function Navbar() {
             className={cn(
               "pointer-events-auto flex items-center gap-2 transition-all duration-500",
               scrolled
-                ? "bg-[#030f07]/90 backdrop-blur-2xl border border-white/[0.10] shadow-2xl shadow-black/40 rounded-2xl px-3 py-2"
+                ? "bg-[#F5F0E6]/90 backdrop-blur-2xl border border-[#123527]/10 shadow-2xl shadow-[#123527]/5 rounded-2xl px-3 py-2"
                 : "bg-transparent px-4 py-2"
             )}
           >
@@ -130,18 +130,18 @@ export function Navbar() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Image
-                src="/SparxGrowth Logo.png"
+                src="/logo-dark.png"
                 alt="SparxGrowth"
-                width={300}
-                height={84}
-                className="h-24 w-auto object-contain"
+                width={142}
+                height={55}
+                className="h-10 w-auto object-contain logo-forest"
                 priority
               />
             </motion.div>
           </Link>
 
           {/* Divider */}
-          <div className="hidden lg:block w-px h-5 bg-white/10 mx-1" />
+          <div className="hidden lg:block w-px h-5 bg-primary/10 mx-1" />
 
           {/* Desktop nav links */}
           <nav ref={dropdownRef} className="hidden lg:flex items-center gap-0.5">
@@ -155,8 +155,8 @@ export function Navbar() {
                     className={cn(
                       "flex items-center gap-1 px-3.5 py-2 rounded-xl text-sm font-medium transition-all duration-200 whitespace-nowrap",
                       activeDropdown === link.label || pathname.startsWith(link.href)
-                        ? "text-white bg-white/10"
-                        : "text-white/65 hover:text-white hover:bg-white/[0.07]"
+                        ? "text-primary bg-primary/10"
+                        : "text-primary/65 hover:text-primary hover:bg-primary/[0.05]"
                     )}
                   >
                     {link.label}
@@ -173,15 +173,15 @@ export function Navbar() {
                     className={cn(
                       "relative px-3.5 py-2 rounded-xl text-sm font-medium transition-all duration-200 block whitespace-nowrap",
                       pathname === link.href
-                        ? "text-white bg-white/10"
-                        : "text-white/65 hover:text-white hover:bg-white/[0.07]"
+                        ? "text-primary bg-primary/10"
+                        : "text-primary/65 hover:text-primary hover:bg-primary/[0.05]"
                     )}
                   >
                     {link.label}
                     {pathname === link.href && (
                       <motion.span
                         layoutId="nav-active"
-                        className="absolute bottom-1 left-3.5 right-3.5 h-0.5 rounded-full" style={{ background: 'linear-gradient(135deg, #064226, #1b9058, #ffde59)' }}
+                        className="absolute bottom-1 left-3.5 right-3.5 h-0.5 rounded-full" style={{ background: 'linear-gradient(135deg, #123527, #1C4D38, #C59B27)' }}
                       />
                     )}
                   </Link>
@@ -200,7 +200,7 @@ export function Navbar() {
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 8, scale: 0.97 }}
                           transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
-                          className="absolute top-full left-1/2 -translate-x-1/2 mt-2 min-w-[240px] p-1.5 rounded-2xl border border-[#1b9058]/20 bg-[#030f07]/97 backdrop-blur-2xl shadow-2xl shadow-black/60"
+                          className="absolute top-full left-1/2 -translate-x-1/2 mt-2 min-w-[240px] p-1.5 rounded-2xl border border-primary/20 bg-[#F5F0E6]/97 backdrop-blur-2xl shadow-2xl shadow-[#123527]/10"
                         >
                           {link.label === "Services" &&
                             services.map((s, i) => (
@@ -213,11 +213,11 @@ export function Navbar() {
                                 <Link
                                   href={`/services/${s.slug}`}
                                   onClick={() => setActiveDropdown(null)}
-                                  className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-sm text-white/65 hover:text-white hover:bg-white/[0.07] transition-all duration-150 group"
+                                  className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-sm text-primary/65 hover:text-primary hover:bg-primary/[0.05] transition-all duration-150 group"
                                 >
                                   <span
                                     className="w-1.5 h-1.5 rounded-full flex-shrink-0 group-hover:scale-125 transition-transform"
-                                    style={{ background: s.color }}
+                                    style={{ background: '#1b9058' }}
                                   />
                                   {s.shortTitle}
                                 </Link>
@@ -234,11 +234,11 @@ export function Navbar() {
                                 <Link
                                   href={`/industries/${ind.slug}`}
                                   onClick={() => setActiveDropdown(null)}
-                                  className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-sm text-white/65 hover:text-white hover:bg-white/[0.07] transition-all duration-150 group"
+                                  className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-sm text-primary/65 hover:text-primary hover:bg-primary/[0.05] transition-all duration-150 group"
                                 >
                                   <span
                                     className="w-1.5 h-1.5 rounded-full flex-shrink-0 group-hover:scale-125 transition-transform"
-                                    style={{ background: ind.color }}
+                                    style={{ background: '#1b9058' }}
                                   />
                                   {ind.title}
                                 </Link>
@@ -254,23 +254,23 @@ export function Navbar() {
           </nav>
 
           {/* Divider */}
-          <div className="hidden lg:block w-px h-5 bg-white/10 mx-1" />
+          <div className="hidden lg:block w-px h-5 bg-primary/10 mx-1" />
 
           {/* CTAs */}
           <div className="hidden lg:flex items-center gap-2">
             <Link
               href="/free-visibility-checkup"
               className="px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 whitespace-nowrap"
-              style={{ color: '#ffde59', border: '1px solid rgba(255,222,89,0.30)', background: 'transparent' }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,222,89,0.65)'; (e.currentTarget as HTMLElement).style.background = 'rgba(255,222,89,0.07)'; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,222,89,0.30)'; (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
+              style={{ color: '#C59B27', border: '1px solid rgba(197,155,39,0.30)', background: 'transparent' }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(197,155,39,0.65)'; (e.currentTarget as HTMLElement).style.background = 'rgba(197,155,39,0.07)'; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(197,155,39,0.30)'; (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
             >
               Free Check-Up
             </Link>
             <Link
               href="/contact"
-              className="relative overflow-hidden px-5 py-2 rounded-xl text-sm font-bold text-white whitespace-nowrap group"
-              style={{ background: "linear-gradient(135deg, #064226, #1b9058)" }}
+              className="relative overflow-hidden px-5 py-2 rounded-xl text-sm font-bold text-white keep-white whitespace-nowrap group"
+              style={{ background: "linear-gradient(135deg, #123527, #1C4D38)" }}
             >
               <motion.span
                 className="absolute inset-0 bg-white/20"
@@ -278,8 +278,8 @@ export function Navbar() {
                 whileHover={{ x: "100%" }}
                 transition={{ duration: 0.4 }}
               />
-              <span className="relative flex items-center gap-1.5">
-                <Phone size={12} />
+              <span className="relative flex items-center gap-1.5 text-white keep-white">
+                <Phone size={12} className="text-white keep-white" />
                 Let's Talk
               </span>
             </Link>
@@ -296,19 +296,19 @@ export function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-[99] bg-[#030f07]/98 backdrop-blur-2xl flex flex-col"
+            className="fixed inset-0 z-[99] bg-[#F5F0E6]/98 backdrop-blur-2xl flex flex-col"
           >
-            <div className="flex items-center justify-between px-6 h-20 border-b border-white/[0.06]">
+            <div className="flex items-center justify-between px-6 h-20 border-b border-primary/10">
               <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center">
                 <Image
-                  src="/SparxGrowth Logo.png"
+                  src="/logo-dark.png"
                   alt="SparxGrowth"
-                  width={300}
-                  height={84}
-                  className="h-24 w-auto object-contain"
+                  width={154}
+                  height={60}
+                  className="h-11 w-auto object-contain logo-forest"
                 />
               </Link>
-              <button onClick={() => setMobileOpen(false)} className="p-2 text-white/70 hover:text-white">
+              <button onClick={() => setMobileOpen(false)} className="p-2 text-primary/70 hover:text-primary">
                 <X size={22} />
               </button>
             </div>
@@ -328,8 +328,8 @@ export function Navbar() {
                       className={cn(
                         "block px-4 py-3.5 rounded-xl text-lg font-semibold transition-all",
                         pathname === link.href
-                          ? "text-white bg-white/10"
-                          : "text-white/65 hover:text-white hover:bg-white/[0.06]"
+                          ? "text-primary bg-primary/10"
+                          : "text-primary/65 hover:text-primary hover:bg-primary/[0.05]"
                       )}
                     >
                       {link.label}
@@ -348,17 +348,17 @@ export function Navbar() {
                   href="/free-visibility-checkup"
                   onClick={() => setMobileOpen(false)}
                   className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl text-sm font-semibold transition-all"
-                  style={{ color: '#ffde59', border: '1px solid rgba(255,222,89,0.35)' }}
+                  style={{ color: '#C59B27', border: '1px solid rgba(197,155,39,0.35)' }}
                 >
                   Free Visibility Check-Up
                 </Link>
                 <Link
                   href="/contact"
                   onClick={() => setMobileOpen(false)}
-                  className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl text-sm font-bold text-white"
-                  style={{ background: "linear-gradient(135deg, #064226, #1b9058)" }}
+                  className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl text-sm font-bold text-white keep-white"
+                  style={{ background: "linear-gradient(135deg, #123527, #1C4D38)" }}
                 >
-                  <Phone size={14} />
+                  <Phone size={14} className="text-white keep-white" />
                   Let's Talk
                 </Link>
               </motion.div>
@@ -372,14 +372,14 @@ export function Navbar() {
         initial={{ y: 80 }}
         animate={{ y: 0 }}
         transition={{ delay: 1, duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed bottom-0 left-0 right-0 z-[90] lg:hidden p-4 bg-[#030f07]/90 backdrop-blur-xl border-t border-white/[0.06]"
+        className="fixed bottom-0 left-0 right-0 z-[90] lg:hidden p-4 bg-[#F5F0E6]/90 backdrop-blur-xl border-t border-[#123527]/10"
       >
         <Link
           href="/contact"
-          className="flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-2xl text-sm font-bold text-white"
-          style={{ background: "linear-gradient(135deg, #064226, #1b9058)" }}
+          className="flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-2xl text-sm font-bold text-white keep-white"
+          style={{ background: "linear-gradient(135deg, #123527, #1C4D38)" }}
         >
-          <Phone size={14} />
+          <Phone size={14} className="text-white keep-white" />
           Let's Talk
         </Link>
       </motion.div>

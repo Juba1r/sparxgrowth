@@ -41,7 +41,7 @@ export function FinalCTASection() {
           <div className="flex flex-wrap items-center justify-center gap-6 mt-12 text-sm text-white/40">
             {["No contracts", "Results in 90 days", "London-based team"].map((item, i) => (
               <div key={i} className="flex items-center gap-2">
-                <div className="w-1 h-1 rounded-full bg-cyan-400" />
+                <div className="w-1 h-1 rounded-full bg-[#1b9058]" />
                 {item}
               </div>
             ))}

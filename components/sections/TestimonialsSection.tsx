@@ -48,7 +48,7 @@ export function TestimonialsSection() {
               <Quote
                 size={36}
                 className="mx-auto mb-6 opacity-20"
-                style={{ color: '#1b9058' }}
+                style={{ color: 'var(--primary)' }}
               />
               <div className="flex justify-center gap-1 mb-5">
                 {[1, 2, 3, 4, 5].map((i) => (
@@ -62,9 +62,9 @@ export function TestimonialsSection() {
               <div
                 className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full text-sm font-semibold"
                 style={{
-                  background: "rgba(27,144,88,0.15)",
-                  border: "1px solid rgba(27,144,88,0.3)",
-                  color: "#1b9058",
+                  background: "rgba(18, 53, 39, 0.08)",
+                  border: "1px solid rgba(18, 53, 39, 0.2)",
+                  color: "var(--primary)",
                 }}
               >
                 {testimonials[active].result}
@@ -88,7 +88,7 @@ export function TestimonialsSection() {
             <button
               onClick={prev}
               aria-label="Previous testimonial"
-              className="w-11 h-11 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:border-white/30 transition-all"
+              className="w-11 h-11 rounded-full border border-primary/15 flex items-center justify-center text-primary/60 hover:text-primary hover:border-primary/30 transition-all bg-primary/[0.02] hover:bg-primary/[0.05]"
             >
               <ChevronLeft size={18} />
             </button>
@@ -102,7 +102,7 @@ export function TestimonialsSection() {
                   style={{
                     width: i === active ? 32 : 8,
                     background:
-                      i === active ? "transparent" : "rgba(255,255,255,0.2)",
+                      i === active ? "transparent" : "rgba(18, 53, 39, 0.15)",
                   }}
                 >
                   {i === active && (
@@ -110,7 +110,7 @@ export function TestimonialsSection() {
                       layoutId="dot-active"
                       className="absolute inset-0 rounded-full"
                       style={{
-                        background: "linear-gradient(90deg, #064226, #1b9058)",
+                        background: "var(--gradient-green)",
                       }}
                     />
                   )}
@@ -120,7 +120,7 @@ export function TestimonialsSection() {
             <button
               onClick={next}
               aria-label="Next testimonial"
-              className="w-11 h-11 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:border-white/30 transition-all"
+              className="w-11 h-11 rounded-full border border-primary/15 flex items-center justify-center text-primary/60 hover:text-primary hover:border-primary/30 transition-all bg-primary/[0.02] hover:bg-primary/[0.05]"
             >
               <ChevronRight size={18} />
             </button>

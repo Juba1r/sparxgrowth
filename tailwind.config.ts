@@ -11,19 +11,19 @@ const config: Config = {
       fontFamily: {
         sans: ["Inter", "sans-serif"],
         heading: ["Sunborn", "Plus Jakarta Sans", "sans-serif"],
-        subheading: ["Barriecito", "cursive"],
+        subheading: ["Inter", "sans-serif"],
       },
       colors: {
-        background: "#030f07",
+        background: "#F5F0E6",
         primary: {
-          DEFAULT: "#1b9058",
-          light: "#22b56c",
-          dark: "#064226",
+          DEFAULT: "#123527",
+          light: "#1C4D38",
+          dark: "#0a1f17",
         },
-        accent: "#ffde59",
-        "deep-green": "#064226",
-        surface: "rgba(27,144,88,0.05)",
-        border: "rgba(27,144,88,0.15)",
+        accent: "#C59B27",
+        "deep-green": "#123527",
+        surface: "#EAE3D5",
+        border: "rgba(18, 53, 39, 0.12)",
       },
       animation: {
         marquee: "marquee 25s linear infinite",
@@ -56,13 +56,13 @@ const config: Config = {
         },
       },
       backgroundImage: {
-        "gradient-brand": "linear-gradient(135deg, #064226, #1b9058, #ffde59)",
-        "gradient-green": "linear-gradient(135deg, #064226, #1b9058)",
-        "gradient-gold": "linear-gradient(135deg, #1b9058, #ffde59)",
+        "gradient-brand": "linear-gradient(135deg, #123527, #1C4D38, #C59B27)",
+        "gradient-green": "linear-gradient(135deg, #123527, #1C4D38)",
+        "gradient-gold": "linear-gradient(135deg, #1C4D38, #C59B27)",
         "gradient-hero":
-          "linear-gradient(135deg, #030f07 0%, #064226 50%, #030f07 100%)",
+          "linear-gradient(135deg, #F5F0E6 0%, #EADFCB 50%, #F5F0E6 100%)",
         "gradient-card":
-          "linear-gradient(145deg, rgba(27,144,88,0.08), rgba(6,66,38,0.04))",
+          "linear-gradient(145deg, #FFFFFF, #EAE3D5)",
       },
     },
   },

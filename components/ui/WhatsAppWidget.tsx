@@ -30,13 +30,13 @@ export function WhatsAppWidget() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
             transition={{ duration: 0.2 }}
-            className="mb-4 w-[320px] bg-[#020d06] border border-[#1b9058]/30 rounded-2xl shadow-2xl overflow-hidden glass-card"
+            className="mb-4 w-[320px] bg-[#F5F0E6] border border-[#123527]/20 rounded-2xl shadow-2xl overflow-hidden glass-card"
           >
             {/* Header */}
-            <div className="bg-[#1b9058] p-4 flex items-center justify-between">
+            <div className="bg-[#123527] p-4 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden border-2 border-white/20 p-1">
-                   <Image src="/SparxGrowth Logo.png" alt="SparxGrowth" width={52} height={52} className="object-contain" />
+                <div className="w-10 h-10 bg-[#F5F0E6] rounded-full flex items-center justify-center overflow-hidden border-2 border-white/20 p-1">
+                   <Image src="/logo-dark.png" alt="SparxGrowth" width={52} height={52} className="object-contain logo-forest" />
                 </div>
                 <div>
                   <h3 className="text-white font-bold text-sm">SparxGrowth Team</h3>
@@ -53,7 +53,7 @@ export function WhatsAppWidget() {
             </div>
             
             {/* Chat Body */}
-            <div className="p-5 bg-[#020a05] relative min-h-[140px] flex flex-col justify-end">
+            <div className="p-5 bg-[#EAE3D5] relative min-h-[140px] flex flex-col justify-end">
               <div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CjxyZWN0IHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgZmlsbD0idHJhbnNwYXJlbnQiLz4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0id2hpdGUiLz4KPC9zdmc+')] pointer-events-none" />
               
               <motion.div 
@@ -68,7 +68,7 @@ export function WhatsAppWidget() {
             </div>
             
             {/* Footer */}
-            <div className="p-4 bg-[#030f07] border-t border-white/[0.05] flex items-center justify-center">
+            <div className="p-4 bg-[#F5F0E6] border-t border-[#123527]/10 flex items-center justify-center">
               <a 
                 href={waLink}
                 target="_blank"
@@ -91,7 +91,7 @@ export function WhatsAppWidget() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 10 }}
-              className="absolute right-full mr-4 bg-[#020d06] border border-[#1b9058]/30 glass-card text-white px-4 py-2.5 rounded-2xl text-sm whitespace-nowrap shadow-xl flex items-center gap-3 drop-shadow-[0_0_15px_rgba(27,144,88,0.2)]"
+              className="absolute right-full mr-4 bg-[#F5F0E6] border border-[#123527]/20 glass-card text-primary px-4 py-2.5 rounded-2xl text-sm whitespace-nowrap shadow-xl flex items-center gap-3 drop-shadow-[0_0_15px_rgba(18,53,39,0.08)]"
             >
               <div className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-75"></span>
@@ -100,7 +100,7 @@ export function WhatsAppWidget() {
               Chat with us
               <button 
                 onClick={(e) => { e.stopPropagation(); setIsTooltipVisible(false); }}
-                className="ml-1 text-white/50 hover:text-white"
+                className="ml-1 text-primary/50 hover:text-primary"
               >
                 <X size={14} />
               </button>

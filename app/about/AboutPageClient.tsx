@@ -97,7 +97,7 @@ const timeline = [
   {
     year: "2021",
     title: "Team of 12",
-    desc: "Expanded our specialist team and moved to our Buckhurst Hill offices.",
+    desc: "Expanded our specialist team and moved to our new offices.",
   },
   {
     year: "2023",

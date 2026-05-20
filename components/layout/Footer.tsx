@@ -82,10 +82,10 @@ const socialLinks = [
 const contactDetails = [
   {
     icon: MapPin,
-    value: "123 Liverpool Street, London, EC2M 7PY",
+    value: "14 Hill's Road, Buckhurst Hill, United Kingdom, IG9 5RS",
     color: "#1b9058",
   },
-  { icon: Phone, value: "+44 20 7123 4567", color: "#ffde59" },
+  { icon: Phone, value: "+44 7840 976307", color: "#ffde59" },
   { icon: Mail, value: "hello@sparxgrowth.co.uk", color: "#22b56c" },
 ];
 
@@ -126,10 +126,7 @@ export function Footer() {
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10">
             {/* Brand */}
             <div className="max-w-sm">
-              <Link
-                href="/"
-                className="inline-flex items-center group mb-5"
-              >
+              <Link href="/" className="inline-flex items-center group mb-5">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
@@ -247,7 +244,7 @@ export function Footer() {
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-1.5 mt-5 text-xs font-semibold transition-colors group"
-                style={{ color: '#ffde59' }}
+                style={{ color: "#ffde59" }}
               >
                 Book a free call
                 <ArrowUpRight

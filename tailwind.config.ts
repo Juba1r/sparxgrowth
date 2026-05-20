@@ -59,8 +59,10 @@ const config: Config = {
         "gradient-brand": "linear-gradient(135deg, #064226, #1b9058, #ffde59)",
         "gradient-green": "linear-gradient(135deg, #064226, #1b9058)",
         "gradient-gold": "linear-gradient(135deg, #1b9058, #ffde59)",
-        "gradient-hero": "linear-gradient(135deg, #030f07 0%, #064226 50%, #030f07 100%)",
-        "gradient-card": "linear-gradient(145deg, rgba(27,144,88,0.08), rgba(6,66,38,0.04))",
+        "gradient-hero":
+          "linear-gradient(135deg, #030f07 0%, #064226 50%, #030f07 100%)",
+        "gradient-card":
+          "linear-gradient(145deg, rgba(27,144,88,0.08), rgba(6,66,38,0.04))",
       },
     },
   },

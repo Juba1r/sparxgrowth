@@ -6,8 +6,8 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { MapPin, Phone, Mail, Clock, CheckCircle, Send } from "lucide-react";
 
 const contactInfo = [
-  { icon: MapPin, label: "Office", value: "123 Liverpool Street, London, EC2M 7PY", color: "#1b9058" },
-  { icon: Phone, label: "Phone", value: "+44 20 7123 4567", color: "#ffde59" },
+  { icon: MapPin, label: "Office", value: "14 Hill's Road, Buckhurst Hill, United Kingdom, IG9 5RS", color: "#1b9058" },
+  { icon: Phone, label: "Phone", value: "+44 7840 976307", color: "#ffde59" },
   { icon: Mail, label: "Email", value: "hello@sparxgrowth.co.uk", color: "#1b9058" },
   { icon: Clock, label: "Hours", value: "Mon–Fri: 9am–6pm GMT", color: "#ffde59" },
 ];

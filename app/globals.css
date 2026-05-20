@@ -28,7 +28,7 @@
   --accent-glow: rgba(255, 222, 89, 0.35);
   --deep-green: #064226;
   --surface: rgba(27, 144, 88, 0.05);
-  --surface-hover: rgba(27, 144, 88, 0.10);
+  --surface-hover: rgba(27, 144, 88, 0.1);
   --border: rgba(27, 144, 88, 0.15);
   --border-hover: rgba(27, 144, 88, 0.35);
   --text-primary: #edf5f0;
@@ -52,7 +52,6 @@
 }
 
 * {
-  
   box-sizing: border-box;
 }
 
@@ -281,7 +280,7 @@ body::before {
   padding: 6px 16px;
   border-radius: 9999px;
   background: rgba(27, 144, 88, 0.12);
-  border: 1px solid rgba(27, 144, 88, 0.30);
+  border: 1px solid rgba(27, 144, 88, 0.3);
   color: var(--accent);
 }
 
@@ -379,4 +378,39 @@ body::before {
 }
 .animate-marquee {
   animation: marquee 25s linear infinite;
+}
+
+/* ─────────────────────────────────────────
+      Yellow / Gold Contrast Mapping Overrides
+   ───────────────────────────────────────── */
+
+/* Map bright yellow Tailwind classes to beautiful dark gold */
+.text-\[\#ffde59\],
+.group-hover\:text-\[\#ffde59\]:hover,
+.group:hover .group-hover\:text-\[\#ffde59\],
+.text-accent {
+  color: var(--accent) !important;
+}
+
+/* Map inline styles of yellow to dark gold */
+[style*="color: rgb(255, 222, 89)"],
+[style*="color: #ffde59"],
+[style*="color:#ffde59"] {
+  color: var(--accent) !important;
+}
+
+/* Ensure bright yellow remains yellow inside inline linear-gradient dark blocks */
+[style*="linear-gradient"] [style*="color: rgb(255, 222, 89)"],
+[style*="linear-gradient"] [style*="color: #ffde59"],
+[style*="linear-gradient"] [style*="color:#ffde59"],
+[style*="linear-gradient"] .text-\[\#ffde59\],
+[style*="linear-gradient"] .group-hover\:text-\[\#ffde59\]:hover,
+[style*="linear-gradient"] .group:hover .group-hover\:text-\[\#ffde59\] {
+  color: #ffde59 !important;
+}
+
+/* Ensure that stats inside StatsSection or Footer use var(--accent) properly */
+.text-4xl.font-heading.font-bold.mb-1,
+.text-3xl.font-heading.font-bold.mb-1 {
+  color: var(--accent) !important;
 }

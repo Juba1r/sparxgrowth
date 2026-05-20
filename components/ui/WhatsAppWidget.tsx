@@ -17,7 +17,7 @@ export function WhatsAppWidget() {
     return () => clearTimeout(timer);
   }, []);
 
-  const phoneNumber = "447700000000"; // Placeholder UK number
+  const phoneNumber = "447840976307"; // New WhatsApp number
   const message = "Hi SparxGrowth! I'd like to talk about growing my business.";
   const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

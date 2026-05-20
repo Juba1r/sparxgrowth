@@ -35,7 +35,8 @@ export function Loader() {
             <motion.div
               className="absolute w-96 h-96 rounded-full"
               style={{
-                background: "radial-gradient(circle, rgba(234, 179, 8, 0.08) 0%, transparent 70%)",
+                background:
+                  "radial-gradient(circle, rgba(234, 179, 8, 0.08) 0%, transparent 70%)",
               }}
               animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
               transition={{ duration: 2, repeat: Infinity }}
@@ -50,14 +51,18 @@ export function Loader() {
             >
               <motion.div
                 animate={{ y: [0, -8, 0], scale: [1, 1.05, 1] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               >
                 <Image
                   src="/Sparx Icon.png"
                   alt="SparxGrowth"
                   width={250}
                   height={250}
-                  className="h-52 w-auto object-contain drop-shadow-[0_0_20px_rgba(234,179,8,0.2)]"
+                  className="w-52 h-52 object-contain drop-shadow-[0_0_20px_rgba(234,179,8,0.2)] bg-[#F5F0E6] p-5 rounded-full"
                   priority
                 />
               </motion.div>

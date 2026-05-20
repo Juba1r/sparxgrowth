@@ -80,11 +80,6 @@ const socialLinks = [
 ];
 
 const contactDetails = [
-  {
-    icon: MapPin,
-    value: "14 Hill's Road, Buckhurst Hill, United Kingdom, IG9 5RS",
-    color: "#1b9058",
-  },
   { icon: Phone, value: "+44 7840 976307", color: "#ffde59" },
   { icon: Mail, value: "hello@sparxgrowth.co.uk", color: "#22b56c" },
 ];

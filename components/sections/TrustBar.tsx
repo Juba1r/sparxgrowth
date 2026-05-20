@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 
 const clients = [
   "CHICOME", "THUNDERBIRD FRIED CHICKEN", "ZESTXLDN PRIVATE CHEFS", "Icco Pizza", "EATING IN LONDON", "BALANCE COFFEE",
@@ -24,12 +23,12 @@ export function TrustBar() {
           style={{ background: "linear-gradient(-90deg, var(--background) 0%, transparent 100%)" }} />
 
         <div className="flex overflow-hidden">
-          <motion.div
-            className="flex gap-10 flex-shrink-0 animate-marquee"
+          <div
+            className="flex gap-10 flex-shrink-0 animate-marquee pr-10"
             style={{ width: "max-content" }}
           >
             {clients.map((client, i) => (
-               <div
+              <div
                 key={i}
                 className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-primary/10 bg-primary/[0.03] whitespace-nowrap"
               >
@@ -37,7 +36,22 @@ export function TrustBar() {
                 <span className="text-sm font-medium text-white/40">{client}</span>
               </div>
             ))}
-          </motion.div>
+          </div>
+          <div
+            className="flex gap-10 flex-shrink-0 animate-marquee pr-10"
+            style={{ width: "max-content" }}
+            aria-hidden="true"
+          >
+            {clients.map((client, i) => (
+              <div
+                key={`dup-${i}`}
+                className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-primary/10 bg-primary/[0.03] whitespace-nowrap"
+              >
+                <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "var(--accent)" }} />
+                <span className="text-sm font-medium text-white/40">{client}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

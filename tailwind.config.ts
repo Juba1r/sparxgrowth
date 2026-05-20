@@ -35,7 +35,7 @@ const config: Config = {
       keyframes: {
         marquee: {
           "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(-100%)" },
         },
         "orb-float": {
           "0%, 100%": { transform: "translate(0, 0) scale(1)" },

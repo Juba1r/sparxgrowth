@@ -42,11 +42,11 @@ export function Loader() {
               transition={{ duration: 2, repeat: Infinity }}
             />
 
-            {/* Thunderstorm Radial Flash */}
             <motion.div
               className="pointer-events-none absolute inset-0 z-50"
               style={{
                 background: "radial-gradient(circle, rgba(234, 179, 8, 0.95) 0%, rgba(234, 179, 8, 0) 70%)",
+                mixBlendMode: 'screen'
               }}
               initial={{ opacity: 0 }}
               animate={{ 
@@ -59,7 +59,6 @@ export function Loader() {
                 delay: 1.6, // Triggers just before the loader exits
                 ease: "linear"
               }}
-              style={{ mixBlendMode: 'screen' }}
             />
 
             {/* Logo image */}

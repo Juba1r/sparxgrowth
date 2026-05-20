@@ -127,7 +127,7 @@ export function Footer() {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <Image
-                    src="/logo-light.png"
+                    src="/Sparx Black Logo.png"
                     alt="SparxGrowth"
                     width={280}
                     height={108}

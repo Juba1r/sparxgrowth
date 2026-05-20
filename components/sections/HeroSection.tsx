@@ -120,12 +120,12 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.55 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 text-sm text-white/50"
+          className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 text-base font-medium text-white/50"
         >
           <div className="flex items-center gap-2">
             <div className="flex">
               {[1, 2, 3, 4, 5].map((i) => (
-                <Star key={i} size={14} className="text-yellow-400 fill-yellow-400" />
+                <Star key={i} size={16} className="text-[#ffde59] fill-[#ffde59]" />
               ))}
             </div>
             <span>5.0 on Google</span>

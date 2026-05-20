@@ -36,7 +36,7 @@ export function WhatsAppWidget() {
             <div className="bg-[#123527] p-4 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-[#F5F0E6] rounded-full flex items-center justify-center overflow-hidden border-2 border-white/20 p-1">
-                   <Image src="/logo-dark.png" alt="SparxGrowth" width={52} height={52} className="object-contain logo-forest" />
+                   <Image src="/Sparx Icon.png" alt="SparxGrowth" width={52} height={52} className="object-contain logo-forest" />
                 </div>
                 <div>
                   <h3 className="text-white font-bold text-sm">SparxGrowth Team</h3>

@@ -20,7 +20,7 @@ const config: Config = {
           light: "#1C4D38",
           dark: "#0a1f17",
         },
-        accent: "#C59B27",
+        accent: "#ffde59",
         "deep-green": "#123527",
         surface: "#EAE3D5",
         border: "rgba(18, 53, 39, 0.12)",
@@ -56,9 +56,9 @@ const config: Config = {
         },
       },
       backgroundImage: {
-        "gradient-brand": "linear-gradient(135deg, #123527, #1C4D38, #C59B27)",
+        "gradient-brand": "linear-gradient(135deg, #123527, #1C4D38, #ffde59)",
         "gradient-green": "linear-gradient(135deg, #123527, #1C4D38)",
-        "gradient-gold": "linear-gradient(135deg, #1C4D38, #C59B27)",
+        "gradient-gold": "linear-gradient(135deg, #1C4D38, #ffde59)",
         "gradient-hero":
           "linear-gradient(135deg, #F5F0E6 0%, #EADFCB 50%, #F5F0E6 100%)",
         "gradient-card":

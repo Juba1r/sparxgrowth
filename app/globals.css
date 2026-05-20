@@ -24,8 +24,8 @@
   --primary: #123527;
   --primary-light: #1C4D38;
   --primary-glow: rgba(18, 53, 39, 0.15);
-  --accent: #C59B27;
-  --accent-glow: rgba(197, 155, 39, 0.25);
+  --accent: #ffde59;
+  --accent-glow: rgba(255, 222, 89, 0.25);
   --deep-green: #123527;
   --surface: #EAE3D5;
   --surface-hover: #E3DAC9;
@@ -40,9 +40,9 @@
     #EADFCB 50%,
     #F5F0E6 100%
   );
-  --gradient-brand: linear-gradient(135deg, #123527, #1C4D38, #C59B27);
+  --gradient-brand: linear-gradient(135deg, #123527, #1C4D38, #ffde59);
   --gradient-green: linear-gradient(135deg, #123527, #1C4D38);
-  --gradient-gold: linear-gradient(135deg, #1C4D38, #C59B27);
+  --gradient-gold: linear-gradient(135deg, #1C4D38, #ffde59);
   --gradient-card: linear-gradient(
     145deg,
     #FFFFFF,

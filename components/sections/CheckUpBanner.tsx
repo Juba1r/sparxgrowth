@@ -33,7 +33,7 @@ export function CheckUpBanner() {
               {/* Center-aligned header */}
               <div className="relative text-center mb-10">
                 <div className="inline-flex items-center gap-2 mb-5 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest border"
-                  style={{ color: 'var(--accent)', borderColor: 'var(--accent-glow)', background: 'rgba(197,155,39,0.07)' }}>
+                  style={{ color: 'var(--accent)', borderColor: 'var(--accent-glow)', background: 'rgba(255,222,89,0.07)' }}>
                   <motion.span animate={{ scale: [1, 1.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}>✦</motion.span>
                   Free &amp; No Obligation
                 </div>

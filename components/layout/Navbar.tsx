@@ -70,8 +70,8 @@ export function Navbar() {
               ? "hidden"
               : "lg:hidden",
             scrolled
-              ? "h-16 bg-[#F5F0E6]/95 backdrop-blur-xl border-b border-[#123527]/10 shadow-lg shadow-black/5"
-              : "h-20 bg-transparent"
+              ? "h-20 bg-[#F5F0E6]/95 backdrop-blur-xl border-b border-[#123527]/10 shadow-lg shadow-black/5"
+              : "h-24 bg-transparent"
           )}
         >
           {/* Logo */}
@@ -81,11 +81,11 @@ export function Navbar() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Image
-                src="/logo-dark.png"
+                src="/Sparx Black Logo.png"
                 alt="SparxGrowth"
                 width={154}
                 height={60}
-                className="h-11 w-auto object-contain logo-forest"
+                className="h-14 w-auto object-contain logo-forest"
                 priority
               />
             </motion.div>
@@ -119,8 +119,8 @@ export function Navbar() {
             className={cn(
               "pointer-events-auto flex items-center gap-2 transition-all duration-500",
               scrolled
-                ? "bg-[#F5F0E6]/90 backdrop-blur-2xl border border-[#123527]/10 shadow-2xl shadow-[#123527]/5 rounded-2xl px-3 py-2"
-                : "bg-transparent px-4 py-2"
+                ? "bg-[#F5F0E6]/90 backdrop-blur-2xl border border-[#123527]/10 shadow-2xl shadow-[#123527]/5 rounded-2xl px-4 py-3"
+                : "bg-transparent px-5 py-3"
             )}
           >
           {/* Logo */}
@@ -130,11 +130,11 @@ export function Navbar() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Image
-                src="/logo-dark.png"
+                src="/Sparx Black Logo.png"
                 alt="SparxGrowth"
                 width={142}
                 height={55}
-                className="h-10 w-auto object-contain logo-forest"
+                className="h-14 w-auto object-contain logo-forest"
                 priority
               />
             </motion.div>
@@ -153,7 +153,7 @@ export function Navbar() {
                     onMouseLeave={() => setActiveDropdown(null)}
                     onClick={() => setActiveDropdown(activeDropdown === link.label ? null : link.label)}
                     className={cn(
-                      "flex items-center gap-1 px-3.5 py-2 rounded-xl text-sm font-medium transition-all duration-200 whitespace-nowrap",
+                      "flex items-center gap-1 px-4 py-2.5 rounded-xl text-base font-medium transition-all duration-200 whitespace-nowrap",
                       activeDropdown === link.label || pathname.startsWith(link.href)
                         ? "text-primary bg-primary/10"
                         : "text-primary/65 hover:text-primary hover:bg-primary/[0.05]"
@@ -171,7 +171,7 @@ export function Navbar() {
                   <Link
                     href={link.href}
                     className={cn(
-                      "relative px-3.5 py-2 rounded-xl text-sm font-medium transition-all duration-200 block whitespace-nowrap",
+                      "relative px-4 py-2.5 rounded-xl text-base font-medium transition-all duration-200 block whitespace-nowrap",
                       pathname === link.href
                         ? "text-primary bg-primary/10"
                         : "text-primary/65 hover:text-primary hover:bg-primary/[0.05]"
@@ -181,7 +181,7 @@ export function Navbar() {
                     {pathname === link.href && (
                       <motion.span
                         layoutId="nav-active"
-                        className="absolute bottom-1 left-3.5 right-3.5 h-0.5 rounded-full" style={{ background: 'linear-gradient(135deg, #123527, #1C4D38, #C59B27)' }}
+                        className="absolute bottom-1 left-3.5 right-3.5 h-0.5 rounded-full" style={{ background: 'linear-gradient(135deg, #123527, #1C4D38, #ffde59)' }}
                       />
                     )}
                   </Link>
@@ -260,16 +260,16 @@ export function Navbar() {
           <div className="hidden lg:flex items-center gap-2">
             <Link
               href="/free-visibility-checkup"
-              className="px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 whitespace-nowrap"
-              style={{ color: '#C59B27', border: '1px solid rgba(197,155,39,0.30)', background: 'transparent' }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(197,155,39,0.65)'; (e.currentTarget as HTMLElement).style.background = 'rgba(197,155,39,0.07)'; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(197,155,39,0.30)'; (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
+              className="px-5 py-2.5 rounded-xl text-base font-semibold transition-all duration-300 whitespace-nowrap"
+              style={{ color: '#ffde59', border: '1px solid rgba(255,222,89,0.30)', background: 'transparent' }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,222,89,0.65)'; (e.currentTarget as HTMLElement).style.background = 'rgba(255,222,89,0.07)'; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,222,89,0.30)'; (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
             >
               Free Check-Up
             </Link>
             <Link
               href="/contact"
-              className="relative overflow-hidden px-5 py-2 rounded-xl text-sm font-bold text-white keep-white whitespace-nowrap group"
+              className="relative overflow-hidden px-6 py-2.5 rounded-xl text-base font-bold text-white keep-white whitespace-nowrap group"
               style={{ background: "linear-gradient(135deg, #123527, #1C4D38)" }}
             >
               <motion.span
@@ -298,14 +298,14 @@ export function Navbar() {
             transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
             className="fixed inset-0 z-[99] bg-[#F5F0E6]/98 backdrop-blur-2xl flex flex-col"
           >
-            <div className="flex items-center justify-between px-6 h-20 border-b border-primary/10">
+            <div className="flex items-center justify-between px-6 h-24 border-b border-primary/10">
               <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center">
                 <Image
-                  src="/logo-dark.png"
+                  src="/Sparx Black Logo.png"
                   alt="SparxGrowth"
                   width={154}
                   height={60}
-                  className="h-11 w-auto object-contain logo-forest"
+                  className="h-14 w-auto object-contain logo-forest"
                 />
               </Link>
               <button onClick={() => setMobileOpen(false)} className="p-2 text-primary/70 hover:text-primary">
@@ -348,7 +348,7 @@ export function Navbar() {
                   href="/free-visibility-checkup"
                   onClick={() => setMobileOpen(false)}
                   className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl text-sm font-semibold transition-all"
-                  style={{ color: '#C59B27', border: '1px solid rgba(197,155,39,0.35)' }}
+                  style={{ color: '#ffde59', border: '1px solid rgba(255,222,89,0.35)' }}
                 >
                   Free Visibility Check-Up
                 </Link>

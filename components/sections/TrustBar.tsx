@@ -3,10 +3,8 @@
 import { motion } from "framer-motion";
 
 const clients = [
-  "Marriott Hotels", "IHG Group", "Gordon Ramsay Restaurants", "Huel", "Deliveroo",
-  "Zoopla", "Legal & General", "Chelsea FC", "The Shard", "Harrods",
-  "Marriott Hotels", "IHG Group", "Gordon Ramsay Restaurants", "Huel", "Deliveroo",
-  "Zoopla", "Legal & General", "Chelsea FC", "The Shard", "Harrods",
+  "CHICOME", "THUNDERBIRD FRIED CHICKEN", "ZESTXLDN PRIVATE CHEFS", "Icco Pizza", "EATING IN LONDON", "BALANCE COFFEE",
+  "CHICOME", "THUNDERBIRD FRIED CHICKEN", "ZESTXLDN PRIVATE CHEFS", "Icco Pizza", "EATING IN LONDON", "BALANCE COFFEE",
 ];
 
 export function TrustBar() {

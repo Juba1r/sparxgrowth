@@ -24,8 +24,8 @@
   --primary: #123527;
   --primary-light: #1C4D38;
   --primary-glow: rgba(18, 53, 39, 0.15);
-  --accent: #ffde59;
-  --accent-glow: rgba(255, 222, 89, 0.25);
+  --accent: #EAB308;
+  --accent-glow: rgba(234, 179, 8, 0.25);
   --deep-green: #123527;
   --surface: #EAE3D5;
   --surface-hover: #E3DAC9;
@@ -40,9 +40,9 @@
     #EADFCB 50%,
     #F5F0E6 100%
   );
-  --gradient-brand: linear-gradient(135deg, #123527, #1C4D38, #ffde59);
+  --gradient-brand: linear-gradient(135deg, #123527, #1C4D38, #EAB308);
   --gradient-green: linear-gradient(135deg, #123527, #1C4D38);
-  --gradient-gold: linear-gradient(135deg, #1C4D38, #ffde59);
+  --gradient-gold: linear-gradient(135deg, #1C4D38, #EAB308);
   --gradient-card: linear-gradient(
     145deg,
     #FFFFFF,
@@ -294,8 +294,8 @@ body::before {
 
 /* Dark mode / dark section override for section tags */
 :is(.dark-section, .bg-deep-green, .bg-primary, .bg-\[\#123527\], .bg-\[\#064226\], .bg-gradient-green, .bg-gradient-brand) .section-tag {
-  background: rgba(197, 155, 39, 0.08);
-  border: 1px solid rgba(197, 155, 39, 0.25);
+  background: rgba(234, 179, 8, 0.08);
+  border: 1px solid rgba(234, 179, 8, 0.25);
   color: var(--accent) !important;
 }
 
@@ -400,28 +400,28 @@ body::before {
    ───────────────────────────────────────── */
 
 /* Map bright yellow Tailwind classes to beautiful dark gold */
-.text-\[\#ffde59\],
-.group-hover\:text-\[\#ffde59\]:hover,
-.group:hover .group-hover\:text-\[\#ffde59\],
+.text-\[\#EAB308\],
+.group-hover\:text-\[\#EAB308\]:hover,
+.group:hover .group-hover\:text-\[\#EAB308\],
 .text-accent {
   color: var(--accent) !important;
 }
 
 /* Map inline styles of yellow to dark gold */
 [style*="color: rgb(255, 222, 89)"],
-[style*="color: #ffde59"],
-[style*="color:#ffde59"] {
+[style*="color: #EAB308"],
+[style*="color:#EAB308"] {
   color: var(--accent) !important;
 }
 
 /* Ensure bright yellow remains yellow inside inline linear-gradient dark blocks */
 [style*="linear-gradient"] [style*="color: rgb(255, 222, 89)"],
-[style*="linear-gradient"] [style*="color: #ffde59"],
-[style*="linear-gradient"] [style*="color:#ffde59"],
-[style*="linear-gradient"] .text-\[\#ffde59\],
-[style*="linear-gradient"] .group-hover\:text-\[\#ffde59\]:hover,
-[style*="linear-gradient"] .group:hover .group-hover\:text-\[\#ffde59\] {
-  color: #ffde59 !important;
+[style*="linear-gradient"] [style*="color: #EAB308"],
+[style*="linear-gradient"] [style*="color:#EAB308"],
+[style*="linear-gradient"] .text-\[\#EAB308\],
+[style*="linear-gradient"] .group-hover\:text-\[\#EAB308\]:hover,
+[style*="linear-gradient"] .group:hover .group-hover\:text-\[\#EAB308\] {
+  color: #EAB308 !important;
 }
 
 /* Ensure that stats inside StatsSection or Footer use var(--accent) properly */
@@ -510,8 +510,8 @@ body::before {
 
 /* Keep trust stats and numbers highlight clear */
 .text-accent,
-[style*="color: #ffde59"],
-[style*="color:#ffde59"],
+[style*="color: #EAB308"],
+[style*="color:#EAB308"],
 [style*="color: rgb(255, 222, 89)"] {
   color: var(--accent) !important;
 }

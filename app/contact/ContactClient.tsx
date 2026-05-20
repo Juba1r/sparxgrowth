@@ -6,9 +6,9 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { MapPin, Phone, Mail, Clock, CheckCircle, Send } from "lucide-react";
 
 const contactInfo = [
-  { icon: Phone, label: "Phone", value: "+44 7840 976307", color: "#ffde59" },
+  { icon: Phone, label: "Phone", value: "+44 7840 976307", color: "#EAB308" },
   { icon: Mail, label: "Email", value: "hello@sparxgrowth.co.uk", color: "#1b9058" },
-  { icon: Clock, label: "Hours", value: "Mon–Fri: 9am–6pm GMT", color: "#ffde59" },
+  { icon: Clock, label: "Hours", value: "Mon–Fri: 9am–6pm GMT", color: "#EAB308" },
 ];
 
 export function ContactClient() {

@@ -181,7 +181,7 @@ export function Navbar() {
                     {pathname === link.href && (
                       <motion.span
                         layoutId="nav-active"
-                        className="absolute bottom-1 left-3.5 right-3.5 h-0.5 rounded-full" style={{ background: 'linear-gradient(135deg, #123527, #1C4D38, #ffde59)' }}
+                        className="absolute bottom-1 left-3.5 right-3.5 h-0.5 rounded-full" style={{ background: 'linear-gradient(135deg, #123527, #1C4D38, #EAB308)' }}
                       />
                     )}
                   </Link>
@@ -261,9 +261,9 @@ export function Navbar() {
             <Link
               href="/free-visibility-checkup"
               className="px-5 py-2.5 rounded-xl text-base font-semibold transition-all duration-300 whitespace-nowrap"
-              style={{ color: '#ffde59', border: '1px solid rgba(255,222,89,0.30)', background: 'transparent' }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,222,89,0.65)'; (e.currentTarget as HTMLElement).style.background = 'rgba(255,222,89,0.07)'; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,222,89,0.30)'; (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
+              style={{ color: '#EAB308', border: '1px solid rgba(234,179,8,0.30)', background: 'transparent' }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(234,179,8,0.65)'; (e.currentTarget as HTMLElement).style.background = 'rgba(234,179,8,0.07)'; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(234,179,8,0.30)'; (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
             >
               Free Check-Up
             </Link>
@@ -348,7 +348,7 @@ export function Navbar() {
                   href="/free-visibility-checkup"
                   onClick={() => setMobileOpen(false)}
                   className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl text-sm font-semibold transition-all"
-                  style={{ color: '#ffde59', border: '1px solid rgba(255,222,89,0.35)' }}
+                  style={{ color: '#EAB308', border: '1px solid rgba(234,179,8,0.35)' }}
                 >
                   Free Visibility Check-Up
                 </Link>

@@ -98,7 +98,7 @@ export function FreeCheckupClient() {
               <div className="h-1.5 rounded-full bg-white/[0.08] overflow-hidden">
                 <motion.div
                   className="h-full rounded-full"
-                  style={{ background: "linear-gradient(90deg, #1b9058, #ffde59)" }}
+                  style={{ background: "linear-gradient(90deg, #1b9058, #EAB308)" }}
                   animate={{ width: `${((currentStep + 1) / steps.length) * 100}%` }}
                   transition={{ duration: 0.5, ease: "easeInOut" }}
                 />
@@ -252,7 +252,7 @@ export function FreeCheckupClient() {
             >
               {["Full SEO audit", "Competitor analysis", "Quick wins roadmap"].map((item) => (
                 <div key={item} className="flex items-center gap-3 justify-center text-sm text-white/60">
-                  <CheckCircle size={16} className="text-[#ffde59]" />
+                  <CheckCircle size={16} className="text-[#EAB308]" />
                   {item}
                 </div>
               ))}

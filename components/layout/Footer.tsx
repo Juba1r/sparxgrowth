@@ -80,7 +80,7 @@ const socialLinks = [
 ];
 
 const contactDetails = [
-  { icon: Phone, value: "+44 7840 976307", color: "#ffde59" },
+  { icon: Phone, value: "+44 7840 976307", color: "#EAB308" },
   { icon: Mail, value: "hello@sparxgrowth.co.uk", color: "#22b56c" },
 ];
 
@@ -167,7 +167,7 @@ export function Footer() {
                 >
                   <span
                     className="text-4xl font-heading font-bold mb-1"
-                    style={{ color: "#ffde59" }}
+                    style={{ color: "#EAB308" }}
                   >
                     {t.stat}
                   </span>
@@ -239,7 +239,7 @@ export function Footer() {
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-1.5 mt-5 text-xs font-semibold transition-colors group"
-                style={{ color: "#ffde59" }}
+                style={{ color: "#EAB308" }}
               >
                 Book a free call
                 <ArrowUpRight

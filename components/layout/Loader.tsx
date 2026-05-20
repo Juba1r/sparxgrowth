@@ -28,14 +28,14 @@ export function Loader() {
               transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
             />
             <motion.div
-              className="absolute w-64 h-64 rounded-full border border-[#ffde59]/30"
+              className="absolute w-64 h-64 rounded-full border border-[#EAB308]/30"
               animate={{ rotate: -360 }}
               transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
             />
             <motion.div
               className="absolute w-96 h-96 rounded-full"
               style={{
-                background: "radial-gradient(circle, rgba(255, 222, 89, 0.08) 0%, transparent 70%)",
+                background: "radial-gradient(circle, rgba(234, 179, 8, 0.08) 0%, transparent 70%)",
               }}
               animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
               transition={{ duration: 2, repeat: Infinity }}
@@ -57,7 +57,7 @@ export function Loader() {
                   alt="SparxGrowth"
                   width={250}
                   height={250}
-                  className="h-52 w-auto object-contain drop-shadow-[0_0_20px_rgba(255,222,89,0.2)]"
+                  className="h-52 w-auto object-contain drop-shadow-[0_0_20px_rgba(234,179,8,0.2)]"
                   priority
                 />
               </motion.div>
@@ -67,7 +67,7 @@ export function Loader() {
           {/* Progress bar */}
           <motion.div
             className="absolute bottom-0 left-0 h-0.5"
-            style={{ background: "linear-gradient(90deg, #1C4D38, #ffde59)" }}
+            style={{ background: "linear-gradient(90deg, #1C4D38, #EAB308)" }}
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
             transition={{ duration: 1.8, ease: "easeInOut" }}

@@ -46,7 +46,7 @@ export function StatsSection() {
                 }}
               />
               <div className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-1 sm:mb-2 whitespace-nowrap tracking-tight flex items-center justify-center">
-                <span style={{ color: "#ffde59" }}>
+                <span style={{ color: "#EAB308" }}>
                   <AnimatedCounter
                     value={stat.value}
                     suffix={stat.suffix}

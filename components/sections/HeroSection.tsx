@@ -125,7 +125,7 @@ export function HeroSection() {
           <div className="flex items-center gap-2">
             <div className="flex">
               {[1, 2, 3, 4, 5].map((i) => (
-                <Star key={i} size={16} className="text-[#ffde59] fill-[#ffde59]" />
+                <Star key={i} size={16} className="text-[#EAB308] fill-[#EAB308]" />
               ))}
             </div>
             <span>5.0 on Google</span>

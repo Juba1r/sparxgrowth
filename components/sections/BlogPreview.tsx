@@ -48,10 +48,10 @@ export function BlogPreview() {
                 >
                   <div className="absolute inset-0 flex items-center justify-center opacity-30 group-hover:opacity-50 transition-opacity">
                     <div className="w-24 h-24 rounded-full border border-[#1b9058]/40" />
-                    <div className="absolute w-16 h-16 rounded-full border border-[#ffde59]/20" />
+                    <div className="absolute w-16 h-16 rounded-full border border-[#EAB308]/20" />
                   </div>
                   <div
-                    className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold text-[#ffde59]"
+                    className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold text-[#EAB308]"
                     style={{
                       background: "rgba(27,144,88,0.15)",
                       border: "1px solid rgba(27,144,88,0.25)",
@@ -69,13 +69,13 @@ export function BlogPreview() {
                     </span>
                     <span>{post.date}</span>
                   </div>
-                  <h3 className="text-white font-semibold text-base leading-snug mb-3 group-hover:text-[#ffde59] transition-colors">
+                  <h3 className="text-white font-semibold text-base leading-snug mb-3 group-hover:text-[#EAB308] transition-colors">
                     {post.title}
                   </h3>
                   <p className="text-white/50 text-sm leading-relaxed line-clamp-2 mb-4 flex-1">
                     {post.excerpt}
                   </p>
-                  <div className="flex items-center gap-1.5 text-sm font-semibold text-[#ffde59] group-hover:gap-3 transition-all duration-300 mt-auto">
+                  <div className="flex items-center gap-1.5 text-sm font-semibold text-[#EAB308] group-hover:gap-3 transition-all duration-300 mt-auto">
                     Read More <ArrowRight size={13} />
                   </div>
                 </div>

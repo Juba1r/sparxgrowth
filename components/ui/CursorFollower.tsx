@@ -35,7 +35,7 @@ export function CursorFollower() {
     // Scale up on hoverable elements
     const handleEnter = () => {
       follower.style.transform = "scale(2)";
-      follower.style.borderColor = "rgba(255, 222, 89, 0.8)";
+      follower.style.borderColor = "rgba(234, 179, 8, 0.8)";
     };
     const handleLeave = () => {
       follower.style.transform = "scale(1)";
